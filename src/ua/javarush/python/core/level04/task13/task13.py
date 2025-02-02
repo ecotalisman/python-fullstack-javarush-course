@@ -12,5 +12,5 @@
 
 import random
 def generate_random_number():
-    return print(random.randint(-200, 0))
+    print(random.randint(-200, 0))
 generate_random_number()

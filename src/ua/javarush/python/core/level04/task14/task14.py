@@ -12,5 +12,5 @@ import random
 
 # Write your code here
 def print_random(a, b, c):
-    return print(random.choice([a, b, c]))
+    print(random.choice([a, b, c]))
 print_random(1, 2, 3)

@@ -1,0 +1,42 @@
+// Trash Sorting.
+//
+// Here are five "objects." Remove those that are not JSON.
+
+// 🇺🇦 Ukrainian version:
+
+// Сортування сміття.
+//
+// Тут п'ять "об'єктів". Видаліть ті, які не є JSON
+
+// Write your code here
+[
+  1
+]
+
+{
+  "name": "John"
+}
+
+//[
+//  "Apple",
+//  "Banana",
+//  "Cherry",
+//  100,
+//  3.14,
+//  None
+//]
+
+//{
+//  "address": {
+//    city: "New York",
+//    zipCode: "10001"
+//  }
+//}
+
+//{[
+//  {
+//  [
+//    1
+//  ]
+//  }
+//]}

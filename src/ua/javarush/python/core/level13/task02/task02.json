@@ -1,0 +1,22 @@
+// Fixing.
+//
+// Convert the data from Python to JSON: the final file must contain JSON objects, not Python code.
+
+// 🇺🇦 Ukrainian version:
+
+// Виправлення.
+//
+// Перетворіть дані з Python в JSON: підсумковий файл повинен містити JSON-об'єкти, а не код на Python.
+
+// Write your code here
+//[None, 3.14, True, '']
+//
+//{ {}, {}, {}}
+//
+//[{[{[{'O_O'}]}]}]
+
+[null, 3.14, true, ""]
+
+[ {}, {}, {}]
+
+[[[[[['O_O']]]]]]

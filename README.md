@@ -48,6 +48,7 @@ The course features a vibrant community of learners and professionals. Students 
 ## Detailed Curriculum
 
 ### Module 1: Python CORE
+Introduction to Python programming and a strong foundation for further backend/fullstack learning.
 - Setting up Python and PyCharm, creating and structuring a project.
 - Introduction to Python: variables, data types, data input, loops, and conditionals.
 - Data type conversion, string concatenation.
@@ -57,46 +58,76 @@ The course features a vibrant community of learners and professionals. Students 
 - Modules and packages: setting up environments and `import` usage.
 - Debugging and troubleshooting.
 - Object-oriented programming: objects, classes, constructors, inheritance, and multiple inheritance.
-- Advanced features: iterators, generators, lambda functions, decorators.
+- Advanced Python features: iterators, generators, lambda functions, decorators.
 - Exception handling: `raise`, `with`.
 - File operations.
 - Networking and serialization in Python.
 - Standard libraries: `datetime`, `math`, `json`.
 - Multithreading in Python.
 
-### Module 2: Algorithms and Data Structures
+**Algorithms & Data Structures (within Core progression)**
 - Introduction to algorithms: linear and binary search.
 - Data structures: graphs, memory representation, fixed and dynamic arrays, linked lists, hash functions.
-- Recursion and sorting: recursive and base cases, binary search, sorting algorithms.
+- Recursion and sorting: recursive and base cases, sorting algorithms.
 - Algorithm complexity: time and space complexity, Big O notation.
 - Problem-solving techniques: naive methods, two-pointer technique, sliding window method.
 
-### Module 3: Web Development Fundamentals
+---
+
+### Module 2: Fullstack
+Modern web fundamentals: how the web works, basics of frontend, and interaction with backend + databases.
 - Networking basics: setting up networks, HTTP protocol.
-- Web basics: HTML (tags, attributes, semantics), CSS (selectors, colors), JavaScript (variables, data types, loops, functions, OOP, promises).
-- Backend interaction.
-- Docker: introduction, setup, working with images, Docker Compose, and orchestration.
-
-### Module 4: Backend Development with Django
-- Django basics: project creation, structure, and analysis.
-- Routing and view functions: path planning, converters, application-level routing.
-- Django templates: `include`, `extends`, `block`, context dictionary, loops, conditional statements.
-- Django ORM: table and relationship definitions, CRUD operations, debugging tools.
-- Admin panel customization: superuser creation, model registration, localization.
-- Forms in Django: HTML and Django forms, Bootstrap integration.
-- Middleware and request-response handling.
-- Testing: Pytest and Unittest libraries, parameterization, debugging, fixtures.
-- API development with Django REST Framework: viewsets, routers, token-based authentication, JWT with Djoser.
-- Deployment and optimization: working with servers, Docker Hub, GitHub Actions, CI/CD pipelines.
-
-### Module 5: Advanced Topics
-- Parsing websites: Beautiful Soup, Selenium, Scrapy framework.
-- Alternative frameworks: Flask and FastAPI for lightweight web applications.
-- Database design and optimization: ACID, NoSQL, sharding, clustering.
-- Python & Enterprise tools: WebSockets, Aiohttp, RabbitMQ.
-- Integration with Google services: Sheets API, Drive API.
-- Architect skills: client-server architecture, MVC, design patterns, and REST APIs.
+- Web basics:
+  - HTML (tags, attributes, semantics)
+  - CSS (selectors, layout basics, styling)
+  - JavaScript (variables, data types, loops, functions, OOP basics, promises)
+- Backend interaction (client ↔ server communication concepts).
+- Databases: basics of working with SQL databases.
+- Docker: introduction, setup, working with images, Docker Compose, and orchestration basics.
 
 ---
+
+### Module 3: Django
+Backend web development using Django: building real web apps with routing, templates, forms, admin panel and databases.
+- Django basics: project creation, structure, and analysis.
+- Routing and view functions: URL planning, converters, application-level routing.
+- Django templates: `include`, `extends`, `block`, context dictionary, loops, conditional statements.
+- Forms in Django: HTML and Django forms, Bootstrap integration.
+- Admin panel customization: superuser creation, model registration, localization.
+- Django ORM: table and relationship definitions, CRUD operations, debugging tools.
+- Middleware and request-response handling.
+- Security and optimization basics for Django applications.
+
+**API & Deployment (Django ecosystem)**
+- API development with Django REST Framework: viewsets, routers, token-based authentication, JWT with Djoser.
+- Testing: Pytest and Unittest libraries, parameterization, debugging, fixtures.
+- Deployment and optimization: working with servers, Docker Hub, GitHub Actions, CI/CD pipelines.
+
+---
+
+### Module 4: FastAPI
+High-performance APIs and asynchronous backend development.
+- FastAPI fundamentals: endpoints, request/response, validation, documentation.
+- Asynchronous programming concepts (where and why async is useful).
+- From basic endpoints to more complex architectural patterns.
+
+**Advanced backend topics (built around API development)**
+- Parsing websites: Beautiful Soup, Selenium, Scrapy framework.
+- Alternative lightweight frameworks: Flask (overview/usage where appropriate).
+- Python & Enterprise tools: WebSockets, Aiohttp, RabbitMQ.
+- Integration with Google services: Sheets API, Drive API.
+- Database design and optimization: ACID, NoSQL, sharding, clustering.
+- Architecture skills: client-server architecture, MVC, design patterns, and REST APIs.
+
+---
+
+### Career Center
+Career support module aimed at getting the first job offer:
+- Resume/CV optimization and portfolio packaging.
+- Interview preparation (typical questions, technical screening practice).
+- Guidance on presenting strengths so recruiters notice and invite you to interviews.
+
+---
+
 
 To learn more about the course, visit [JavaRush Python Full Stack Developer Course](https://javarush.com/ua/university/python).

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset form</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <button type="reset">Reset</button>
+    </form>
+    <script>
+        document.getElementById('myForm').addEventListener('reset', function() {
+            //Show a message when the form is reset
+            alert('Form has been reset!');
+        });
+    </script>
+</body>
+</html>

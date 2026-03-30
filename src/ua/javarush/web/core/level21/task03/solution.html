@@ -1,0 +1,56 @@
+<!--
+Paragraph Count
+
+Create an HTML document with a <div class="container"> container containing several <p> paragraphs inside it.
+Write a script that finds all paragraphs inside the container using the querySelectorAll method and outputs their
+count to the console.
+
+Requirements:
+• The HTML document must contain a <div> element with the class "container".
+• There must be several <p> paragraphs inside <div class="container">.
+• The script must use the querySelectorAll method to find all paragraphs inside the element with the class "container".
+• The script must count the number of found paragraphs.
+• The script must output the number of found paragraphs to the console.
+
+🇺🇦 Ukrainian version:
+
+Підрахунок параграфів
+
+Створіть HTML-документ з контейнером <div class="container">, всередині якого знаходиться декілька абзаців <p>.
+Напишіть скрипт, який знаходить всі абзаци всередині контейнера за допомогою методу querySelectorAll та
+виводить їх кількість в консоль.
+
+Вимоги:
+• HTML-документ повинен містити елемент <div> з класом "container".
+• Всередині <div class="container"> повинно бути кілька абзаців <p>.
+• Скрипт повинен використовувати метод querySelectorAll для пошуку всіх абзаців всередині елемента з класом "container".
+• Скрипт повинен підрахувати кількість знайдених абзаців.
+• Скрипт повинен вивести кількість знайдених абзаців в консоль.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paragraph Count</title>
+</head>
+<body>
+    <div class="container">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+
+    <script>
+        // Finding all paragraphs inside the container using querySelectorAll
+        const paragraphs = document.querySelectorAll('.container p');
+
+        // Counting the `number` of found paragraphs
+        const countParagraphs = paragraphs.length;
+
+        // Outputting the number of paragraphs to the console
+        console.log(countParagraphs);
+
+    </script>
+</body>
+</html>

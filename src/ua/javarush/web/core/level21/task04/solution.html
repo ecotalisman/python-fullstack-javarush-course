@@ -1,0 +1,51 @@
+<!--
+First and Last Nodes
+
+Create an HTML document with an unordered list <ul> and several <li> elements. Write a script that gets the first and
+last child nodes of the list using the firstElementChild and lastElementChild properties. Output the text content of
+these nodes to the console.
+
+Requirements:
+• The script must get the first child node of the <ul> element using the firstElementChild property.
+• The script must get the last child node of the <ul> element using the lastElementChild property.
+• The script must output the text content of the first child node of the <ul> element to the console.
+• The script must output the text content of the last child node of the <ul> element to the console.
+
+🇺🇦 Ukrainian version:
+
+Перший і останній вузли
+
+Створіть HTML-документ з ненумерованим списком <ul> і кількома елементами <li>. Напишіть скрипт, який отримує перший
+і останній дочірні вузли списку, використовуючи властивості firstElementChild і lastElementChild. Виведіть текстовий
+вміст цих вузлів у консоль.
+
+Вимоги:
+• Скрипт повинен отримати перший дочірній вузол елемента <ul> з використанням властивості firstElementChild.
+• Скрипт повинен отримати останній дочірній вузол елемента <ul> з використанням властивості lastElementChild.
+• Скрипт повинен вивести в консоль текстовий вміст першого дочірнього вузла <ul>.
+• Скрипт повинен вивести в консоль текстовий вміст останнього дочірнього вузла <ul>.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First and Last Child Nodes</title>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+    <script>
+        const el = document.querySelector('ul');
+        const first = el.firstElementChild;
+        const second = el.lastElementChild;
+        console.log(first.textContent);
+        console.log(second.textContent);
+    </script>
+</body>
+</html>

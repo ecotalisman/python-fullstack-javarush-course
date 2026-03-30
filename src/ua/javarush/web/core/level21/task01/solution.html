@@ -1,0 +1,54 @@
+<!--
+First Paragraph
+
+Create an HTML document with several <p> paragraphs. Write a script that finds the first paragraph using
+    the document.querySelector method and outputs its node name (nodeName), node type (nodeType), and text
+    content (textContent) to the console.
+
+Requirements:
+• The script must use the document.querySelector method to find the first <p> paragraph in the HTML document.
+• The script must output the node name (nodeName) of the first paragraph to the console.
+• The script must output the node type (nodeType) of the first paragraph to the console.
+• The script must output the text content (textContent) of the first paragraph to the console.
+
+🇺🇦 Ukrainian version:
+
+Перший абзац
+
+Створіть HTML-документ з декількома абзацами <p>. Напишіть скрипт, який знаходить перший абзац за допомогою методу
+    document.querySelector, і виводить у консоль його ім'я вузла (nodeName), тип вузла (nodeType) і текстовий
+    вміст (textContent).
+
+Вимоги:
+• Скрипт повинен використовувати метод document.querySelector для знаходження першого абзацу <p> в HTML-документі.
+• Скрипт повинен вивести в консоль ім'я вузла (nodeName) першого абзацу.
+• Скрипт повинен вивести в консоль тип вузла (nodeType) першого абзацу.
+• Скрипт повинен вивести в консоль текстовий вміст (textContent) першого абзацу.
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Перший абзац</title>
+</head>
+<body>
+    <p>Це перший абзац.</p>
+    <p>Це другий абзац.</p>
+    <p>Це третій абзац.</p>
+
+    <script>
+        // Finding the first paragraph using the document.querySelector method
+        const paragraph = document.querySelector('p');
+
+        // Outputting the node name (nodeName) to the console
+        console.log(paragraph.nodeName);
+
+        // Outputting the node type (nodeType) to the console
+        console.log(paragraph.nodeType);
+
+        // Outputting the text content (textContent) to the console
+        console.log(paragraph.textContent);
+    </script>
+</body>
+</html>

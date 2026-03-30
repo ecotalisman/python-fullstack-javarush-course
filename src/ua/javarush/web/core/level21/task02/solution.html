@@ -1,0 +1,46 @@
+<!--
+New List Item
+
+Create an HTML document with an unordered list <ul> and several list items <li>. Write a script that adds a new list
+    item with the text "New Item" to the end of the list using the innerHTML property.
+
+Requirements:
+• The script must add a new <li> list item with the text "New Item" to the end of the existing unordered list <ul>.
+• The script must use the innerHTML property to add the new list item.
+• Create an HTML document that contains an unordered list <ul> with several <li> items.
+• The script must be connected to the HTML document and run when the page loads or on an event.
+• The script must correctly update the DOM tree by adding a new list item so that it is displayed on the page.
+
+🇺🇦 Ukrainian version:
+
+Новий елемент списку
+
+Створіть HTML-документ з ненумерованим списком <ul> і кількома елементами списку <li>. Напишіть скрипт, який додає
+            новий елемент списку з текстом "New Item" в кінець списку, використовуючи властивість innerHTML.
+
+Вимоги:
+• Скрипт повинен додати новий елемент списку <li> з текстом "New Item" в кінець існуючого ненумерованого списку <ul>.
+• Скрипт повинен використовувати властивість innerHTML для додавання нового елемента списку.
+• Створіть HTML-документ, який містить ненумерований список <ul> з кількома елементами <li>.
+• Скрипт повинен бути підключений до HTML-документа і виконуватися при завантаженні сторінки або за подією.
+• Скрипт повинен коректно оновити DOM-дерево, додавши новий елемент списку, щоб він відображався на сторінці.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New list item</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        const list = document.querySelector('#myList');
+        list.innerHTML += '<li>New Item</li>';
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!--
+New Paragraph
+
+Write a script that creates a new <p> element, sets its text content to "This is a new paragraph", and appends it to
+the end of the document body using the appendChild method.
+
+Requirements:
+• The script must create a new <p> element using the document.createElement method.
+• The script must set the text content of the new <p> element to "This is a new paragraph" using the textContent
+or innerText property.
+• The script must append the new <p> element to the end of the document body (document.body) using the appendChild method.
+
+🇺🇦 Ukrainian version:
+
+Новий абзац
+
+Напишіть скрипт, який створює новий елемент <p>, встановлює його текстовий вміст на "Це новий абзац", і додає його
+в кінець тіла документа з використанням методу appendChild.
+
+Вимоги:
+• Скрипт повинен створити новий елемент <p> з використанням методу document.createElement.
+• Скрипт повинен встановити текстовий вміст нового елемента <p> на "Це новий абзац" за допомогою властивості
+textContent або innerText.
+• Скрипт повинен додати новий елемент <p> в кінець тіла документа (document.body) з використанням методу appendChild.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Paragraph</title>
+</head>
+<body>
+    <script>
+        // Creating a new <p> element
+        const paragraph = document.createElement('p');
+
+        // Setting the text content
+        paragraph.textContent = 'This is a new paragraph';
+
+        // Appending the new <p> element to the end of the document body
+        document.body.appendChild(paragraph);
+    </script>
+</body>
+</html>

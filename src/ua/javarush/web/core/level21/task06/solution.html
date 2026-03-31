@@ -1,0 +1,54 @@
+<!--
+Inserting an Element
+
+Write a script that creates a new <div> element with the text "This is a new element". Then insert this element before
+an existing <h1> element on the page using the insertBefore method.
+
+Requirements:
+• The script must create a new <div> element.
+• The new <div> element must be assigned the text "This is a new element".
+• The script must find the <h1> element on the page before which the new element will be inserted.
+• The script must use the insertBefore method to insert the new <div> element before the found <h1> element.
+• After the script runs, a new <div> element with the text "This is a new element" must appear on the page before
+the <h1> element.
+
+🇺🇦 Ukrainian version:
+
+Вставка елемента
+
+Напишіть скрипт, який створює новий елемент <div> з текстом "Це новий елемент". Потім вставте цей елемент перед
+існуючим елементом <h1> на сторінці, використовуючи метод insertBefore.
+
+Вимоги:
+• Скрипт повинен створити новий елемент <div>.
+• Новому елементу <div> повинен бути присвоєний текст "Це новий елемент".
+• Скрипт повинен знайти на сторінці елемент <h1>, перед яким буде вставлено новий елемент.
+• Скрипт повинен використовувати метод insertBefore для вставки нового елемента <div> перед знайденим елементом <h1>.
+• Після виконання скрипта на сторінці повинен з'явитися новий елемент <div> з текстом "Це новий елемент", розташований
+перед елементом <h1>.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Element Example</title>
+</head>
+<body>
+    <h1>Page Heading</h1>
+
+    <script>
+        // Creating a new <div> element
+        const newDiv = document.createElement('div');
+
+        // Setting the text for the new <div> element
+        newDiv.textContent = 'This is a new element';
+
+        // Getting the existing <h1> element
+        const referenceElement = document.querySelector('h1');
+
+        // Inserting the new <div> element before the <h1> element
+        document.body.insertBefore(newDiv, referenceElement);
+    </script>
+</body>
+</html>

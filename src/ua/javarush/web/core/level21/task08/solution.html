@@ -1,0 +1,61 @@
+<!--
+Changing Paragraph Style
+
+Write a script that finds a <p> element by its id and changes its style: sets the background color to yellow, the text
+color to blue, and increases the font size to 20px. Output the current styles of the element before and after the changes.
+
+Requirements:
+• The script must find the <p> element using its id.
+• The script must change the background color of the found <p> element to yellow.
+• The script must change the text color of the found <p> element to blue.
+• The script must change the font size of the found <p> element to 20px.
+• The script must output the current styles of the <p> element to the console before and after applying the changes.
+
+🇺🇦 Ukrainian version:
+
+Зміна стилю абзацу
+
+Напишіть скрипт, який знаходить елемент <p> за його id і змінює його стиль: встановлює колір фону в жовтий, колір тексту
+в синій і збільшує розмір шрифту до 20px. Виведіть поточні стилі елемента до і після змін.
+
+Вимоги:
+• Скрипт повинен знайти елемент <p> з використанням його id.
+• Скрипт повинен змінити колір фону знайденого елемента <p> на жовтий.
+• Скрипт повинен змінити колір тексту знайденого елемента <p> на синій.
+• Скрипт повинен змінити розмір шрифту знайденого елемента <p> на 20px.
+• Скрипт повинен вивести в консоль поточні стилі елемента <p> до і після застосування змін.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Changing Paragraph Style</title>
+</head>
+<body>
+    <p id="myParagraph">This is a paragraph that will be changed by the script.</p>
+    <script>
+        // Finding the <p> element by its id
+        const paragraph = document.getElementById('myParagraph');
+
+        // Outputting the current styles before the changes
+        const styles = window.getComputedStyle(paragraph);
+        console.log(styles.color);
+        console.log(styles.fontSize);
+
+        // Changing the background color to yellow
+        paragraph.style.backgroundColor = 'yellow';
+
+        // Changing the text color to blue
+        paragraph.style.color = 'blue';
+
+        // Changing the font size to 20px
+        paragraph.style.fontSize = '20px';
+
+        // Outputting the current styles after the changes
+        const updateStyles = window.getComputedStyle(paragraph);
+        console.log(updateStyles.color);
+        console.log(updateStyles.fontSize);
+    </script>
+</body>
+</html>

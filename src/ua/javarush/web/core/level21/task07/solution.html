@@ -1,0 +1,58 @@
+<!--
+Toggling Classes
+
+Write a script that finds a <p> element by its id and toggles the highlight class on it every time the element is clicked.
+Demonstrate the presence of the highlight class before and after toggling by outputting the result to the console.
+
+Requirements:
+• The script must find the <p> element by its id using the document.getElementById method.
+• The script must add a click event handler to the found element.
+• The script must use the classList.toggle method to toggle the highlight class on the element on each click.
+• The script must output the presence of the highlight class on the element before and after toggling to the console.
+
+🇺🇦 Ukrainian version:
+
+Перемикання класів
+
+Напишіть скрипт, який знаходить елемент <p> за його id та перемикає у нього клас highlight при кожному кліку на елемент.
+Продемонструйте наявність класу highlight перед і після перемикання, виводячи результат у консоль.
+
+Вимоги:
+• Скрипт має знайти елемент <p> за допомогою його id з використанням методу document.getElementById.
+• Скрипт має додати обробник події кліку на знайдений елемент.
+• Скрипт має використовувати метод classList.toggle для перемикання класу highlight у елемента при кожному кліку.
+• Скрипт має виводити в консоль наявність класу highlight у елемента перед і після перемикання.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toggling Classes</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<p id="myParagraph">Click me to toggle highlight class!</p>
+<script>
+    // Finding the <p> element by its id
+    const btn = document.getElementById('myParagraph');
+
+    // Adding a click event handler to the element
+    btn.addEventListener("click", () => {
+
+        // Outputting the presence of the highlight class before toggling
+        console.log(btn.classList.contains('highlight'));
+
+        // Toggling the highlight class
+        btn.classList.toggle('highlight');
+
+        // Outputting the presence of the highlight class after toggling
+        console.log(btn.classList.contains('highlight'));
+    });
+</script>
+</body>
+</html>

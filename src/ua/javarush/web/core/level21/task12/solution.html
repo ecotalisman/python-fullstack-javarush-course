@@ -1,0 +1,48 @@
+<!--
+Load Events
+
+Write a script that adds load and DOMContentLoaded event handlers to the window and document objects respectively.
+The handlers should output a message to the console indicating that the corresponding event has occurred, along with
+the time it occurred (timeStamp).
+
+Requirements:
+• The program must add a load event handler to the window object.
+• The load event handler must output a message to the console indicating that the load event has occurred, along
+with its timeStamp.
+• The program must add a DOMContentLoaded event handler to the document object.
+• The DOMContentLoaded event handler must output a message to the console indicating that the DOMContentLoaded event
+has occurred, along with its timeStamp.
+
+🇺🇦 Ukrainian version:
+
+Події завантаження
+
+Напишіть скрипт, який додає обробники подій load та DOMContentLoaded до об'єктів window і document відповідно.
+Обробники повинні виводити в консоль повідомлення, яке вказує, що відповідна подія сталася, і час її настання (timeStamp).
+
+Вимоги:
+• Програма повинна додавати обробник події load до об'єкта window.
+• Обробник події load повинен виводити в консоль повідомлення, яке вказує, що подія load сталася, і час її настання (timeStamp).
+• Програма повинна додавати обробник події DOMContentLoaded до об'єкта document.
+• Обробник події DOMContentLoaded повинен виводити в консоль повідомлення, яке вказує, що подія DOMContentLoaded сталася,
+і час її настання (timeStamp).
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Load Events</title>
+</head>
+<body>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        console.log("Event DOMContentLoaded is start", event.timeStamp)
+    });
+
+    window.addEventListener("load", (event) => {
+        console.log("Event Load is start", event.timeStamp)
+    })
+</script>
+</html>

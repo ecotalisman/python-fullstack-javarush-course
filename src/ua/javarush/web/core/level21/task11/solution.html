@@ -1,0 +1,53 @@
+<!--
+Mouse Coordinates
+
+Write a script that adds a mousemove event handler to a div element with the id mouseArea. The handler must output
+the current cursor coordinates (clientX and clientY) to the console whenever the mouse moves inside this element.
+
+Requirements:
+• The program must add a mousemove event handler to the div element with the id mouseArea.
+• The program must get the div element with the id mouseArea using the document.getElementById method.
+• The mousemove event handler must output the current cursor coordinates (clientX and clientY) to the console whenever
+the mouse moves inside the element.
+• The program must ensure that the coordinates are output only when the mouse moves inside the div element with
+the id mouseArea.
+
+🇺🇦 Ukrainian version:
+
+Координати миші
+
+Напишіть скрипт, який додає обробник події mousemove до елемента div з ідентифікатором mouseArea. Обробник повинен
+виводити в консоль поточні координати курсора (clientX і clientY) при кожному русі миші всередині цього елемента.
+
+Вимоги:
+• Програма повинна додати обробник події mousemove до елемента div з ідентифікатором mouseArea.
+• Програма повинна отримати елемент div з ідентифікатором mouseArea за допомогою методу document.getElementById.
+• Обробник події mousemove повинен виводити в консоль поточні координати курсора (clientX і clientY) при кожному русі
+миші всередині елемента.
+• Програма повинна гарантувати, що координати виводяться тільки при русі миші всередині елемента div з ідентифікатором
+mouseArea.
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Coordinates</title>
+    <style>
+        #mouseArea {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="mouseArea"></div>
+    <script>
+        const mouseArea = document.getElementById('mouseArea');
+        mouseArea.addEventListener('mousemove', function (event) {
+            console.log(`X: ${event.clientX}, Y: ${event.clientY}`);
+        });
+    </script>
+</body>
+</html>

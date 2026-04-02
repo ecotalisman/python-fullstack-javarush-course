@@ -1,0 +1,49 @@
+<!--
+Multiple Event Handlers
+
+Write a script that adds two click event handlers to a single button. The first handler should output the message
+"First handler" to the console, and the second should output "Second handler". The handlers must execute sequentially
+each time the button is clicked.
+
+Requirements:
+• The program must include a button element to which the event handlers will be added.
+• The program must add the first click event handler to the button, which outputs the message "First handler" to the console.
+• The program must add the second click event handler to the button, which outputs the message "Second handler" to the console.
+• Both handlers must execute sequentially each time the button is clicked.
+
+🇺🇦 Ukrainian version:
+
+Кілька обробників
+
+Напишіть скрипт, який додає два обробники події click до однієї кнопки. Перший обробник має виводити в консоль
+повідомлення "Перший обробник", а другий — "Другий обробник". Обробники повинні виконуватись послідовно при кожному
+натисканні на кнопку.
+
+Вимоги:
+• Програма повинна включати елемент кнопки, до якого будуть додаватись обробники подій.
+• Програма повинна додавати до кнопки перший обробник події click, який виводить в консоль повідомлення "Перший обробник".
+• Програма повинна додавати до кнопки другий обробник події click, який виводить в консоль повідомлення "Другий обробник".
+• Обидва обробники повинні виконуватись послідовно при кожному натисканні на кнопку.
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Event Handlers</title>
+</head>
+<body>
+<button id="myButton">Click Me</button>
+<script>
+    const button = document.getElementById('myButton');
+
+    button.addEventListener('click', function () {
+        console.log('First handler');
+    });
+
+    button.addEventListener('click', function () {
+        console.log('Second handler');
+    });
+</script>
+</body>
+</html>

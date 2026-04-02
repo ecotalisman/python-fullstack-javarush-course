@@ -1,0 +1,57 @@
+<!--
+Removing an Event Handler
+
+Write a script that adds a click event handler to the first button and outputs the message "The button was clicked".
+Also add a second button that removes the click event handler from the first button when clicked. Implement
+this using the addEventListener and removeEventListener methods.
+
+Requirements:
+• The program must add a click event handler to the first button using the addEventListener method.
+• When the first button is clicked, the message "The button was clicked" must be output to the console.
+• The program must add a second button that will be used to remove the event handler from the first button.
+• When the second button is clicked, the click event handler of the first button must be removed using the
+removeEventListener method.
+• The program must use the addEventListener and removeEventListener methods to add and remove event handlers.
+
+🇺🇦 Ukrainian version:
+
+Видалення обробника
+
+Напишіть скрипт, який додає обробник події click до першої кнопки і виводить повідомлення "Кнопка була натиснута".
+Також додайте другу кнопку, при натисканні на яку обробник події click у першої кнопки повинен бути видалений.
+Реалізуйте це за допомогою методів addEventListener і removeEventListener.
+
+Вимоги:
+• Програма повинна додати обробник події click до першої кнопки з використанням методу addEventListener.
+• При натисканні на першу кнопку повинно виводитися повідомлення "Кнопка була натиснута".
+• Програма повинна додати другу кнопку, яка буде використовуватися для видалення обробника події у першої кнопки.
+• При натисканні на другу кнопку обробник події click у першої кнопки повинен бути видалений з використанням
+методу removeEventListener.
+• Програма повинна використовувати методи addEventListener і removeEventListener для додавання та видалення обробників подій.
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Видалення обробника</title>
+</head>
+<body>
+    <button id="button1">First button</button>
+    <button id="button2">Second button</button>
+    <script>
+        const buttonOne = document.getElementById('button1');
+        const buttonTwo = document.getElementById('button2');
+
+        function clickHandler() {
+            alert('The button was clicked');
+        }
+
+        buttonOne.addEventListener('click', clickHandler);
+        buttonTwo.addEventListener('click', function () {
+            buttonOne.removeEventListener('click', clickHandler);
+            alert('The event handler has been removed');
+        });
+    </script>
+</body>
+</html>

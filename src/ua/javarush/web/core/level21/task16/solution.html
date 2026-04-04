@@ -1,0 +1,57 @@
+<!--
+Updating Text
+
+Create a custom event named updateText with a detail parameter containing the text "Updated text". Add an event handler
+to the div with the id textContainer that updates its content with the new text when this event is received.
+Dispatch the event from the updateButton button.
+
+Requirements:
+• The program must create a custom event named updateText that includes a detail parameter with the text "Updated text".
+• The program must add an updateText event handler to the div element with the id textContainer.
+• The event handler must update the content of the div element with the id textContainer using the text from the event's
+detail parameter.
+• The program must dispatch the created custom updateText event when the button with the id updateButton is clicked.
+
+🇺🇦 Ukrainian version:
+
+Оновлення тексту
+
+Створіть кастомну подію updateText з параметром detail, що містить текст "Updated text". Додайте обробник на div з
+ідентифікатором textContainer, який оновлює його вміст новим текстом при отриманні цієї події. Диспетчте подію
+з кнопки updateButton.
+
+Вимоги:
+• Програма повинна створити кастомну подію з іменем updateText, яка включає параметр detail з текстом "Updated text".
+• Програма повинна додати обробник події updateText на елемент div з ідентифікатором textContainer.
+• Обробник події повинен оновлювати вміст елемента div з ідентифікатором textContainer текстом з параметра detail події.
+• Програма повинна диспетчити створену кастомну подію updateText при натисканні на кнопку з ідентифікатором updateButton.
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Text Example</title>
+</head>
+<body>
+<div id="textContainer">Original text</div>
+<button id="updateButton">Update</button>
+
+<script>
+    const updateButton = document.getElementById('updateButton');
+    const textContainer = document.getElementById('textContainer');
+
+    const updateText = new CustomEvent('updateText', {
+        detail: {message: 'Updated text'},
+    });
+
+    textContainer.addEventListener('updateText', function (event) {
+        textContainer.textContent = event.detail.message;
+    });
+
+    updateButton.addEventListener('click', function () {
+        textContainer.dispatchEvent(updateText);
+    });
+</script>
+</body>
+</html>

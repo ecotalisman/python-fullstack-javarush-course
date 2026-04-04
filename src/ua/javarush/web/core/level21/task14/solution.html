@@ -1,0 +1,72 @@
+<!--
+Stopping Propagation
+
+Write a script that adds click event handlers to the div and button elements. When the button is clicked, the handler
+must output the message "The button was clicked" and use the stopPropagation() method so that the event does not bubble up
+to the div. The div handler must output the message "Click inside the div".
+
+Requirements:
+• The program must add a click event handler to the div element.
+• The program must add a click event handler to the button element.
+• The click event handler for the button element must output the message "The button was clicked".
+• The click event handler for the button element must use the stopPropagation() method to prevent the event from
+bubbling up to the div element.
+• The click event handler for the div element must output the message "Click inside the div".
+
+🇺🇦 Ukrainian version:
+
+Зупинка спливання
+
+Напишіть скрипт, який додає обробники події click до елементів div і button. При кліку на кнопку, обробник має
+виводити повідомлення "Кнопка натиснута" і використовувати метод stopPropagation(), щоб подія не спливала до div.
+Обробник div має виводити повідомлення "Клік всередині div".
+
+Вимоги:
+• Програма повинна додати обробник події click до елемента div.
+• Програма повинна додати обробник події click до елемента button.
+• Обробник події click для елемента button повинен виводити повідомлення "Кнопка натиснута".
+• Обробник події click для елемента button повинен використовувати метод stopPropagation(), щоб запобігти спливанню
+події до елемента div.
+• Обробник події click для елемента div повинен виводити повідомлення "Клік всередині div".
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopping Propagation</title>
+    <style>
+        #container {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="button">Click me</button>
+    </div>
+    <script>
+        const containerId = document.getElementById('container');
+        const buttonId = document.getElementById('button');
+
+        containerId.addEventListener('click', function (event) {
+            console.log('Click inside the div');
+        });
+
+        buttonId.addEventListener('click', function (event) {
+            console.log('The button was clicked');
+            event.stopPropagation();
+        });
+    </script>
+</body>
+</html>

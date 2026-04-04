@@ -1,0 +1,48 @@
+<!--
+Preventing Navigation
+
+Write a script that adds a click event handler to the link with id="myLink". The handler must prevent navigation
+by using the preventDefault() method from the event object and output the message "Navigation to the link was
+prevented" to the console.
+
+Requirements:
+• The program must select the link element with id="myLink" from the document.
+• The program must add a click event handler to the selected link element.
+• Inside the event handler, the program must use the preventDefault() method from the event object to prevent navigation
+to the link.
+• The program must output the message "Navigation to the link was prevented" to the console when the click event
+is triggered on the link element.
+
+🇺🇦 Ukrainian version:
+
+Скасування переходу
+
+Напишіть скрипт, який додає обробник події click до посилання з id="myLink". Обробник має запобігати переходу за посиланням,
+використовуючи метод preventDefault() з об'єкта події, і виводити повідомлення "Перехід за посиланням скасовано" в консоль.
+
+Вимоги:
+• Програма повинна вибрати елемент посилання з id="myLink" із документа.
+• Програма повинна додати обробник події click до вибраного елемента посилання.
+• Всередині обробника події програма повинна використовувати метод preventDefault() з об'єкта події для запобігання
+переходу за посиланням.
+• Програма повинна виводити повідомлення "Перехід за посиланням скасовано" в консоль при спрацьовуванні події click
+на елементі посилання.
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Preventing Navigation</title>
+</head>
+<body>
+<a href="https://example.com" id="myLink">Go to example.com</a>
+<script>
+    const link = document.getElementById('myLink');
+    link.addEventListener('click', function (event) {
+        console.log('Перехід за посиланням скасовано');
+        event.preventDefault();
+    });
+</script>
+</body>
+</html>

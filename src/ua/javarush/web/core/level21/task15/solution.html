@@ -1,0 +1,60 @@
+<!--
+Save Notification
+
+Write a script that creates a custom event named dataSaved with the message "Data has been saved successfully".
+Dispatch this event on the button with the id saveButton when it is clicked, and output the message to the console.
+
+Requirements:
+• The script must create a custom event named dataSaved with the message "Data has been saved successfully".
+• The script must find the button with the id saveButton in the document.
+• The script must add a click event handler to the saveButton button.
+• The click handler must dispatch the dataSaved event when the saveButton button is clicked.
+• The script must output the message "Data has been saved successfully" to the console when the dataSaved event is dispatched.
+
+🇺🇦 Ukrainian version:
+
+Повідомлення про збереження
+
+Напиши скрипт, який створює кастомну подію dataSaved з повідомленням "Data has been saved successfully". Диспетч цю подію
+на кнопку з ідентифікатором saveButton при кліку на неї і виводь повідомлення в консоль.
+
+Вимоги:
+• Скрипт повинен створити кастомну подію з іменем dataSaved і повідомленням "Data has been saved successfully".
+• Скрипт повинен знайти кнопку з ідентифікатором saveButton у документі.
+• Скрипт повинен додати обробник події кліку на кнопку saveButton.
+• Обробник кліку повинен диспетчити подію dataSaved при натисканні на кнопку saveButton.
+• Скрипт повинен виводити повідомлення "Data has been saved successfully" в консоль при диспетчеризації події dataSaved.
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Save Notification</title>
+    <style>
+        #saveButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<button id="saveButton">Save</button>
+<script>
+    const dataSaved = document.getElementById('saveButton');
+
+    const dataSavedEvent = new CustomEvent('dataSaved', {
+        detail: {message: 'Data has been saved successfully'},
+    });
+
+    dataSaved.addEventListener('dataSaved', function (event) {
+        console.log(event.detail.message);
+    });
+
+    dataSaved.addEventListener('click', function () {
+        dataSaved.dispatchEvent(dataSavedEvent);
+    });
+</script>
+</body>
+</html>

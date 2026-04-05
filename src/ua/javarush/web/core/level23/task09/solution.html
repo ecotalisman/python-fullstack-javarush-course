@@ -1,0 +1,82 @@
+<!--
+Cookies: Username
+
+Write JavaScript code that prompts the user for their name using a prompt window and saves it in a cookie named "username"
+for 7 days. Then create a function that reads the value of the "username" cookie and displays it in an alert.
+
+Requirements:
+• The program must prompt the user for their name using the prompt function and save it to a variable.
+• The program must save the entered username in a cookie named "username" with an expiration period of 7 days.
+• The program must include a function that reads the value of the cookie named "username".
+• The function that reads the cookie value must display it using alert.
+
+🇺🇦 Ukrainian version:
+
+Куки: ім'я користувача
+Напишіть JavaScript-код, який запитує у користувача його ім'я через вікно prompt і зберігає його в куки з ім'ям "username"
+на 7 днів. Потім створіть функцію, яка зчитує значення куки "username" і виводить його в alert.
+
+Вимоги:
+• Програма повинна запитувати у користувача його ім'я за допомогою функції prompt і зберігати його в змінну.
+• Програма повинна зберігати введене ім'я користувача в куки з ім'ям "username" і терміном дії 7 днів.
+• Програма повинна включати функцію, яка зчитує значення куки з ім'ям "username".
+• Функція, яка зчитує значення куки, повинна виводити його за допомогою alert.
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Username Cookie</title>
+</head>
+<body>
+<script>
+    // Function for setting a cookie
+    //TODO:
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + encodeURIComponent(value || "") + expires + "; path=/";
+    }
+
+    // Function for getting a cookie
+    //TODO:
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i].trim();
+            if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+        }
+        return null;
+    }
+
+    // Prompting the user for their name and saving it in a cookie
+    //TODO:
+    let savedUser = getCookie("username");
+    if (savedUser) {
+        showUsername();
+    } else {
+        let answer = prompt("Enter your username: ");
+        if (answer !== null && answer.trim() !== "") {
+            setCookie("username", answer, 7);
+            showUsername();
+        }
+    }
+
+    // Function for reading the cookie value and displaying it in an alert
+    //TODO:
+    function showUsername() {
+        alert(getCookie('username'));
+    }
+
+    // Calling the function to display the username from the cookie
+    //TODO:
+    // The code is written above
+
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!--
+Deleting a Cookie
+
+Write JavaScript code that sets a cookie named "sessionId" with an arbitrary value and an expiration period of 7 days.
+Then create a button that, when clicked, deletes the "sessionId" cookie by setting an expiration date in the past.
+
+Requirements:
+• The program must include code to set a cookie named "sessionId" with an arbitrary value and an expiration period of 7 days.
+• The program must create a button element on the web page that is visible to the user.
+• The program must include an event handler for the button that sets an expiration date in the past for the "sessionId" cookie,
+which results in its deletion.
+• The event handler must be attached to the button so that the cookie is deleted every time the button is clicked.
+
+🇺🇦 Ukrainian version:
+
+Видалення куки
+Напиши JavaScript-код, який встановлює куки "sessionId" з довільним значенням і терміном дії 7 днів. Потім створи кнопку,
+при натисканні на яку куки "sessionId" буде видалятися шляхом установки минулого терміну дії.
+
+Вимоги:
+• Програма повинна включати код для встановлення куки з ім'ям "sessionId", довільним значенням і терміном дії 7 днів.
+• Програма повинна створювати елемент кнопки на веб-сторінці, який буде видимий користувачеві.
+• Програма повинна включати обробник події для кнопки, який встановлює минулий термін дії для куки "sessionId",
+що призводить до її видалення.
+• Обробник події повинен бути прив'язаний до кнопки, щоб видалення куки відбувалося при кожному натисканні на кнопку.
+-->
+
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Видалення куки</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<button id="deleteCookieButton">Видалити куки</button>
+<script>
+    // Setting a cookie named "sessionId" with an arbitrary value and an expiration period of 7 days
+    //TODO:
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + encodeURIComponent(value || "") + expires + "; path=/";
+    }
+
+    // Function for deleting a cookie by setting an expiration date in the past
+    //TODO:
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i].trim();
+            if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+        }
+        return null;
+    }
+
+    // Attaching an event handler to the button to delete the cookie when clicked
+    //TODO:
+    setCookie("sessionId", 'abc-123', 7);
+    const deleteCookieButton = document.getElementById('deleteCookieButton');
+
+    deleteCookieButton.addEventListener('click', function () {
+        setCookie("sessionId", 'abc-123', -1);
+        console.log(getCookie("sessionId"));
+    });
+</script>
+</body>
+</html>

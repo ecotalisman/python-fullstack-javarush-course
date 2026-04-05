@@ -1,0 +1,98 @@
+<!--
+Form Data
+
+Create a web page with a form for entering data (for example, name, email, and message). When the form data changes,
+save it to sessionStorage. When the page is reloaded, if the data is present in sessionStorage, automatically fill
+the form with the saved values.
+
+Requirements:
+• A web page must be created with an HTML form containing fields for entering a name, email, and message.
+• When the data in the form fields changes, the new values must be saved to sessionStorage.
+• When the page is reloaded, if sessionStorage contains data for the corresponding form fields, they must be automatically
+filled with these values.
+• Event handlers must be added to track changes in the form fields and save their values to sessionStorage.
+• A way to reset the data in the form and in sessionStorage must be provided, for example, by using a separate button.
+
+🇺🇦 Ukrainian version:
+
+Дані форми
+
+Створіть веб-сторінку з формою для введення даних (наприклад, ім'я, email та повідомлення). При зміні даних у формі
+зберігайте їх у sessionStorage. При перезавантаженні сторінки, якщо дані присутні в sessionStorage, автоматично
+заповнюйте форму збереженими значеннями.
+
+Вимоги:
+• Необхідно створити веб-сторінку з HTML-формою, що містить поля для введення імені, email і повідомлення.
+• При зміні даних у полях форми нові значення повинні зберігатися в sessionStorage.
+• При перезавантаженні сторінки, якщо в sessionStorage присутні дані для відповідних полів форми, вони повинні
+автоматично заповнюватися цими значеннями.
+• Необхідно додати обробники подій для відстеження змін у полях форми та збереження їх значень у sessionStorage.
+• Передбачити можливість обнулення даних у формі та sessionStorage (наприклад, з використанням окремої кнопки).
+-->
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Form</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+        }
+        label, input, textarea, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="data-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="button" id="reset-btn">Reset</button>
+    </form>
+
+    <script>
+        //TODO:
+        const dataForm = document.getElementById('data-form');
+        const resetBtn = document.getElementById('reset-btn');
+
+        dataForm.addEventListener('input', function (event) {
+            const fieldName = event.target.name;
+            const fieldValue = event.target.value;
+
+            sessionStorage.setItem(fieldName, fieldValue);
+        });
+
+        const savedName = sessionStorage.getItem('name');
+        const savedEmail = sessionStorage.getItem('email');
+        const savedMessage = sessionStorage.getItem('message');
+
+        if (savedName) {
+            document.querySelector('[name="name"]').value = savedName;
+        }
+
+        if (savedEmail) {
+            document.querySelector('[name="email"]').value = savedEmail;
+        }
+
+        if (savedMessage) {
+            document.querySelector('[name="message"]').value = savedMessage;
+        }
+
+        resetBtn.addEventListener('click', function () {
+            dataForm.reset();
+            sessionStorage.clear();
+        });
+    </script>
+</body>
+</html>

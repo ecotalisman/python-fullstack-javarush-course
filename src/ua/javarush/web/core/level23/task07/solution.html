@@ -1,0 +1,90 @@
+<!--
+Saving Settings
+
+Create a web page with a form for entering a username and selecting a theme (light or dark). When the "Save" button
+is clicked, save the username and the selected theme to localStorage. When the page loads, if the data is present in
+localStorage, automatically fill the form with the saved values and apply the selected theme.
+
+Requirements:
+• The page must contain a form with a field for entering a username and a switch for selecting a theme (light or dark).
+• When the "Save" button is clicked, the program must save the entered username and the selected theme to localStorage.
+• When the page loads, if there is data about the user and the selected theme in localStorage, the form must be
+automatically filled with these values.
+• When the page loads, if a theme was saved in localStorage, the program must automatically apply this theme to the web page.
+
+🇺🇦 Ukrainian version:
+
+Збереження налаштувань
+
+Створіть веб-сторінку з формою для вводу імені користувача та вибору теми (світла або темна). При натисканні на кнопку
+"Зберегти", зберігайте ім'я користувача і вибрану тему в localStorage. При завантаженні сторінки, якщо дані присутні в
+localStorage, автоматично заповнюйте форму збереженими значеннями і застосовуйте вибрану тему.
+
+Вимоги:
+• Сторінка повинна містити форму з полем для вводу імені користувача і перемикачем для вибору теми (світла або темна).
+• При натисканні на кнопку "Зберегти" програма повинна зберігати введене ім'я користувача і вибрану тему в localStorage.
+• При завантаженні сторінки, якщо в localStorage є дані про користувача і вибрану тему, форма повинна автоматично
+заповнюватися цими значеннями.
+• При завантаженні сторінки, якщо тема була збережена в localStorage, програма повинна автоматично застосовувати цю тему
+до веб-сторінки.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saving Settings</title>
+    <style>
+        body.light {
+            background-color: white;
+            color: black;
+        }
+
+        body.dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form id="settingsForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <div>
+        <label for="theme">Theme:</label>
+        <select id="theme" name="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+    <button type="button" id="saveButton">Save</button>
+</form>
+<script>
+    //TODO:
+    const saveButton = document.getElementById('saveButton');
+    const userName = document.getElementById('username');
+    const theme = document.getElementById('theme');
+
+    const savedTheme = localStorage.getItem('theme');
+    const savedUsername = localStorage.getItem('username');
+
+    if (savedTheme) {
+        theme.value = savedTheme;
+        document.body.className = savedTheme;
+    }
+    if (savedUsername) {
+        userName.value = savedUsername;
+    }
+
+    saveButton.addEventListener('click', function () {
+        const selectedTheme = theme.value;
+        const savedName = userName.value;
+
+        localStorage.setItem('theme', selectedTheme);
+        localStorage.setItem('username', savedName);
+
+        document.body.className = selectedTheme;
+    });
+</script>
+</body>
+</html>

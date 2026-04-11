@@ -31,6 +31,8 @@ You need to install **Docker Engine** on Ubuntu. Follow the main steps, starting
 - Display the installed Docker version using the `docker --version` or `docker version` command.
 
 ---
+## 🇺🇦 Ukrainian version:
+---
 
 # Встановлення Docker на Ubuntu
 

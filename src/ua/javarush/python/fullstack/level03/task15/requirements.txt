@@ -1,0 +1,2 @@
+# Python application dependency
+flask

@@ -1,0 +1,47 @@
+# Creating a Simple docker-compose.yml File
+# Create a docker-compose.yml file for an application consisting of two services:
+# an Nginx-based web server and a MongoDB database.
+# The web server must be available on port 8080, and MongoDB on port 27017.
+# Define a volume for storing MongoDB data.
+#
+# Requirements:
+# • The docker-compose.yml file must include a service that uses the Nginx image.
+# • The service must be configured to accept incoming connections on port 8080.
+# • The docker-compose.yml file must include a service that uses the MongoDB image.
+# • The service must be configured to accept connections on port 27017.
+# • The docker-compose.yml file must define a volume for storing MongoDB data
+#   to ensure data persistence between container restarts.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Створення простого файлу docker-compose.yml
+# Створіть файл docker-compose.yml для застосунку, що складається з двох сервісів:
+# веб-сервера на базі Nginx і бази даних MongoDB.
+# Веб-сервер повинен бути доступний на порту 8080, а MongoDB — на порту 27017.
+# Задайте тому для збереження даних MongoDB.
+#
+# Вимоги:
+# • Файл docker-compose.yml повинен включати сервіс, що використовує образ Nginx.
+# • Сервіс має бути налаштований так, щоб приймати вхідні з'єднання на порту 8080.
+# • Файл docker-compose.yml повинен включати сервіс, що використовує образ MongoDB.
+# • Сервіс має бути налаштований так, щоб приймати з'єднання на порту 27017.
+# • У файлі docker-compose.yml має бути заданий том для збереження даних MongoDB,
+#   щоб забезпечити збереження даних між перезапусками контейнера.
+
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

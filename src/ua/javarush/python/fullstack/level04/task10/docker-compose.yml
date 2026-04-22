@@ -1,0 +1,47 @@
+# Creating a Network Between Services
+# Create a docker-compose.yml file for an application consisting of three services:
+# web, app, and db. All services must run on the same custom network
+# to communicate with each other.
+#
+# Requirements:
+# • The docker-compose.yml file must be created and include definitions for three services: web, app, and db.
+# • The docker-compose.yml file must define a custom network on which all three services will run.
+# • The web, app, and db services must be connected to the same custom network
+#   to enable communication between them.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Створення мережі між сервісами
+# Створіть файл docker-compose.yml для застосунку, яке складатиметься з трьох сервісів:
+# web, app і db. Усі сервіси мають працювати в одній користувацькій мережі для взаємодії між собою.
+#
+# Вимоги:
+# • Файл docker-compose.yml має бути створений і включати опис трьох сервісів: web, app і db.
+# • У файлі docker-compose.yml має бути визначена користувацька мережа, у якій працюватимуть усі три сервіси.
+# • Сервіси web, app і db мають бути підключені до однієї і тієї ж користувацької мережі для забезпечення взаємодії між ними.
+
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    networks:
+      - my_network
+
+  app:
+    image: python:3.8-slim
+    networks:
+      - my_network
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

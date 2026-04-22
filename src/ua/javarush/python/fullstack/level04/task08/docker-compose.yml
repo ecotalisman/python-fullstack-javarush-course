@@ -1,0 +1,47 @@
+# Adding Environment Variables
+# Using the existing docker-compose.yml file, add environment variables
+# to the mongodb service for the MongoDB database:
+# set the password for the root user through the MONGO_INITDB_ROOT_PASSWORD environment variable.
+#
+# Requirements:
+# • In docker-compose.yml, the mongodb service must include the MONGO_INITDB_ROOT_PASSWORD environment variable,
+#   which sets the password for the root user.
+# • The MONGO_INITDB_ROOT_PASSWORD environment variable must be specified
+#   in the Docker Compose environment variable format.
+# • The environment variable must be added to the environment section
+#   inside the mongodb service definition in the docker-compose.yml file.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Додавання змінних оточення
+# Використовуючи існуючий файл docker-compose.yml, додайте в сервіс mongodb
+# змінні оточення для бази даних MongoDB:
+# задайте пароль для користувача root через змінну оточення MONGO_INITDB_ROOT_PASSWORD.
+#
+# Вимоги:
+# • В docker-compose.yml в сервісі mongodb повинна бути додана змінна оточення MONGO_INITDB_ROOT_PASSWORD,
+#   яка задає пароль для користувача root.
+# • Змінна оточення MONGO_INITDB_ROOT_PASSWORD повинна бути вказана
+#   у форматі змінних оточення Docker Compose.
+# • Змінна оточення повинна бути додана до секції environment
+#   всередині визначення сервісу mongodb у файлі docker-compose.yml.
+
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+       - MONGO_INITDB_ROOT_PASSWORD=somePassword
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

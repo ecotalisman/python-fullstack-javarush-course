@@ -1,0 +1,33 @@
+# Mounting Directories
+# Create a docker-compose.yml file for an application in which the app service
+# runs on Node.js and mounts a local source code directory (src)
+# from the host machine into the container for development.
+#
+# Requirements:
+# • A file named docker-compose.yml must be created to define the application configuration and its services.
+# • The docker-compose.yml file must define an app service that uses one of the official Node.js images as its base.
+# • The docker-compose.yml file must include a configuration that mounts the local source code directory (src)
+#   from the host machine into the container for development.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Монтування директорій
+# Створіть файл docker-compose.yml для програми, в якому сервіс app
+# буде працювати на базі Node.js і монтувати локальну директорію
+# з вихідним кодом (src) на хост-машині у контейнер для розробки.
+#
+# Вимоги:
+# • Необхідно створити файл з іменем docker-compose.yml для визначення конфігурації програми та її сервісів.
+# • Файл docker-compose.yml повинен визначити сервіс app, який використовує один із офіційних образів Node.js як базовий.
+# • Файл docker-compose.yml повинен включати налаштування, яке монтує локальну директорію з вихідним кодом (src)
+#   на хост-машині у контейнер для розробки.
+
+version: '3.8'
+
+services:
+  app:
+    image: node:18
+    volumes:
+      - ./src:/usr/src/app
+    working_dir: /usr/src/app
+    command: npm start

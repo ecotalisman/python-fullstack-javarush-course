@@ -1,0 +1,33 @@
+# Using Healthcheck
+# Add an Nginx service to the docker-compose.yml file
+# and configure a healthcheck for it so that Docker checks
+# the container status every 30 seconds.
+#
+# Requirements:
+# • The docker-compose.yml file must define an Nginx service.
+# • The Nginx service in the docker-compose.yml file must include a healthcheck section.
+# • The healthcheck section must specify a container status check interval of 30 seconds.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Використання Healthcheck
+# Додайте у файл docker-compose.yml сервіс Nginx
+# і налаштуйте для нього healthcheck, щоб Docker перевіряв стан контейнера кожні 30 секунд.
+#
+# Вимоги:
+# • У файлі docker-compose.yml повинен бути визначений сервіс Nginx.
+# • Сервіс Nginx у файлі docker-compose.yml повинен включати секцію healthcheck.
+# • У секції healthcheck повинен бути встановлений інтервал перевірки стану контейнера, який дорівнює 30 секунд.
+
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

@@ -1,0 +1,56 @@
+# Checking Network Connectivity
+# Create a docker-compose.yml file with a web server and a database.
+# The web server must be able to successfully "ping" the database.
+#
+# Requirements:
+# • The project must contain a file named docker-compose.yml in which the configurations
+#   for the web server and the database are described.
+# • The web server in docker-compose.yml must be configured in such a way
+#   that it supports sending ping requests to the database.
+# • The database must be configured in the docker-compose.yml file
+#   so that it can accept connection requests from the web server.
+# • The network connection between the web server and the database must be established successfully,
+#   which can be verified using a ping request from the web server to the database.
+# • Unique names for the web server and the database must be included in the docker-compose.yml file
+#   to make their identification and interaction easier.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Перевірка мережевого з'єднання
+# Створіть файл docker-compose.yml з веб-сервером і базою даних.
+# Веб-сервер повинен успішно "пінгувати" базу даних.
+#
+# Вимоги:
+# • У проєкті повинен бути файл з ім'ям docker-compose.yml, у якому будуть описані конфігурації для веб-сервера і бази даних.
+# • Веб-сервер у docker-compose.yml повинен бути налаштований таким чином, щоб підтримувати можливість надсилання
+# ping-запитів до бази даних.
+# • База даних повинна бути налаштована у файлі docker-compose.yml так, щоб мати можливість приймати запити на підключення
+# від веб-сервера.
+# • Мережеве з'єднання між веб-сервером і базою даних повинно бути успішно встановлене, що можна перевірити за допомогою
+# ping-запиту з веб-сервера до бази даних.
+# • У файл docker-compose.yml повинні бути включені унікальні імена для веб-сервера і бази даних, щоб полегшити їх
+# ідентифікацію та взаємодію.
+
+version: '3.8'
+
+services:
+  web:
+    image: alpine
+    container_name: web_server
+    command: ping -c 4 database
+    depends_on:
+      - database
+    networks:
+      - webnet
+
+  database:
+    image: mysql:5.7
+    container_name: database
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge

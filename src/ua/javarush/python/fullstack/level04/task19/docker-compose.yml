@@ -1,0 +1,37 @@
+# Using Variables in yml
+# Create a .env file that specifies the NGINX version and the host port.
+# Then create a docker-compose.yml file that uses these variables
+# to configure the NGINX web server.
+#
+# Requirements:
+# • Create a file named .env and add the variables NGINX_VERSION and HOST_PORT with the specified values.
+# • The docker-compose.yml file must be configured to use the NGINX_VERSION and HOST_PORT variables
+#   for the appropriate configuration of the NGINX container.
+# • In docker-compose.yml, the NGINX version must be set according to the NGINX_VERSION variable
+#   defined in the .env file.
+# • The NGINX container in docker-compose.yml must be configured to use the port
+#   defined by the HOST_PORT variable from the .env file for listening on the host.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Використання змінних у yml
+# Створіть файл .env, де будуть вказані версії NGINX та порт для хоста.
+# Потім створіть файл docker-compose.yml, який використовує ці змінні
+# для налаштування веб-сервера NGINX.
+#
+# Вимоги:
+# • Створити файл із назвою .env, у який необхідно додати змінні NGINX_VERSION і HOST_PORT із вказаними значеннями.
+# • Файл docker-compose.yml має бути налаштований так, щоб використовувати змінні NGINX_VERSION і HOST_PORT для відповідної конфігурації контейнера NGINX.
+# • У docker-compose.yml версія NGINX має бути встановлена відповідно до зазначеної змінної NGINX_VERSION з файлу .env.
+# • Контейнер NGINX у docker-compose.yml має бути налаштований так, щоб використовувати порт, визначений змінною
+# HOST_PORT з файлу .env, для прослуховування на хості.
+
+version: '3.8'
+
+services:
+  web:
+    image: nginx:${NGINX_VERSION}
+    ports:
+      - "${HOST_PORT}:80"
+    environment:
+      - NGINX_VERSION=${NGINX_VERSION}

@@ -1,0 +1,41 @@
+# Configuring a Database with Variables
+# Create a .env file that specifies the username and password for PostgreSQL.
+# Use these variables in the docker-compose.yml file to pass them
+# to the database container.
+#
+# Requirements:
+# • A file named .env must be created, containing the variables DB_USER and DB_PASSWORD with the corresponding values.
+# • The docker-compose.yml file must use the DB_USER and DB_PASSWORD environment variables from the .env file
+#   to pass them to the database container.
+# • The database container in docker-compose.yml must be configured in such a way
+#   that it accepts the username and password through the environment variables defined in the .env file.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Налаштування бази даних із змінними
+# Створіть файл .env, у якому будуть вказані логін і пароль для PostgreSQL.
+# Використовуйте ці змінні у файлі docker-compose.yml, щоб передати їх
+# у контейнер бази даних.
+#
+# Вимоги:
+# • Необхідно створити файл із ім'ям .env, у який потрібно помістити змінні DB_USER і DB_PASSWORD з відповідними значеннями.
+# • Файл docker-compose.yml має використовувати змінні середовища DB_USER і DB_PASSWORD із файлу .env для передачі їх у
+# контейнер бази даних.
+# • Контейнер бази даних у docker-compose.yml має бути налаштований таким чином,
+#   щоб приймати логін і пароль через змінні середовища, задані у .env файлі.
+
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

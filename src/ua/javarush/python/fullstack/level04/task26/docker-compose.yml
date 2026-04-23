@@ -1,0 +1,68 @@
+# Mounting Data with a Bind Mount and a Named Volume
+# Create a docker-compose.yml file for an application
+# that uses an Nginx web server and a PostgreSQL database.
+# The web server must mount local configuration files,
+# and the database must use a named volume to store data.
+# Both services must communicate through a single network.
+#
+# Requirements:
+# • The docker-compose file must contain the definition of one custom network
+#   through which the Nginx web server and the PostgreSQL database will communicate.
+# • The Nginx web server in the docker-compose file must mount local configuration files
+#   using bind mounts.
+# • The PostgreSQL database must use a named volume for data storage,
+#   which must be defined in the docker-compose file.
+# • The docker-compose file must contain a service definition
+#   for the Nginx web server with the required configuration.
+# • The docker-compose file must contain a service definition
+#   for the PostgreSQL database using a named volume for data.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Монтування даних з прив'язаним і іменованим томом
+# Створіть docker-compose.yml файл для застосунку,
+# яке використовує веб-сервер Nginx і базу даних PostgreSQL.
+# Веб-сервер повинен монтувати локальні файли конфігурації,
+# а база даних повинна використовувати іменований том для зберігання даних.
+# Обидві служби повинні взаємодіяти через одну мережу.
+#
+# Вимоги:
+# • Docker-compose файл повинен містити визначення однієї користувацької мережі,
+#   через яку будуть взаємодіяти веб-сервер Nginx і база даних PostgreSQL.
+# • Веб-сервер Nginx у docker-compose файлі повинен монтувати локальні файли конфігурації
+#   за допомогою прив'язаних томів.
+# • База даних PostgreSQL повинна використовувати іменований том для зберігання даних,
+#   який буде визначено у docker-compose файлі.
+# • Docker-compose файл повинен містити визначення служби
+#   для веб-сервера Nginx з необхідною конфігурацією.
+# • Docker-compose файл повинен містити визначення служби
+#   для бази даних PostgreSQL із використанням іменованого тому для даних.
+
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - webnet
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: exampleuser
+      POSTGRES_PASSWORD: examplepass
+      POSTGRES_DB: exampledb
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - webnet
+
+networks:
+  webnet:
+
+volumes:
+  db-data:

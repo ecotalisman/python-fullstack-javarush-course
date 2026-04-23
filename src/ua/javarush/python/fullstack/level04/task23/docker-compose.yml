@@ -1,0 +1,41 @@
+# Mounting a Named Volume
+# Create a docker-compose.yml file for a PostgreSQL database
+# that uses a named volume to store data in the /var/lib/postgresql/data
+# directory inside the container. Name the volume pgdata.
+# The data must persist even after the container is restarted.
+#
+# Requirements:
+# • A docker-compose.yml file must be created to configure the PostgreSQL service.
+# • A named volume called pgdata must be defined in the docker-compose.yml file.
+# • The PostgreSQL container must use the pgdata volume to store data in the /var/lib/postgresql/data directory.
+# • The data stored in the pgdata volume must persist even after the PostgreSQL container is restarted.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Монтування іменованого тому
+# Створіть docker-compose.yml файл для бази даних PostgreSQL,
+# яка використовує іменований том для зберігання даних у директорії
+# /var/lib/postgresql/data всередині контейнера. Назвіть том pgdata,
+# дані повинні зберігатися навіть після перезапуску контейнера.
+#
+# Вимоги:
+# • Необхідно створити файл docker-compose.yml для конфігурації сервісу PostgreSQL.
+# • У файлі docker-compose.yml має бути визначений іменований том із назвою pgdata.
+# • Контейнер PostgreSQL має використовувати том pgdata для зберігання даних у директорії /var/lib/postgresql/data.
+# • Дані, що зберігаються в томі pgdata, повинні зберігатися навіть після перезапуску контейнера PostgreSQL.
+
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: yourusername
+      POSTGRES_PASSWORD: yourpassword
+      POSTGRES_DB: yourdatabase
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

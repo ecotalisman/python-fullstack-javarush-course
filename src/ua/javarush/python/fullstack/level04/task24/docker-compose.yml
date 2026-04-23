@@ -1,0 +1,42 @@
+# Bind Mount for Nginx
+# Create a docker-compose.yml file for an Nginx web server
+# that mounts local Nginx configuration files and HTML pages.
+# The local nginx.conf file and the html directory
+# must be bound to the corresponding directories inside the container.
+#
+# Requirements:
+# • A docker-compose.yml file must be created to configure the Nginx web server with mounted local directories.
+# • The local nginx.conf file must be mounted into the corresponding directory inside the Nginx container.
+# • The local html directory must be mounted into the corresponding directory inside the Nginx container,
+#   ensuring that the HTML pages are available.
+# • The container in docker-compose.yml must use the Nginx image
+#   to serve as a web server for delivering content.
+# • The bind mounts must ensure data persistence across container restarts
+#   by keeping changes stored outside the container.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Прив’язаний том для Nginx
+# Створіть файл docker-compose.yml для веб-сервера Nginx,
+# який монтує локальні файли конфігурації Nginx та HTML сторінок.
+# Локальні файли nginx.conf та директорія html повинні бути прив’язані
+# до відповідних директорій всередині контейнера.
+#
+# Вимоги:
+# • Файл docker-compose.yml має бути створений для налаштування веб-сервера Nginx з монтуванням локальних директорій.
+# • Локальний файл nginx.conf має бути змонтований у відповідну директорію всередині контейнера Nginx.
+# • Локальна директорія html має бути змонтована у відповідну директорію всередині контейнера Nginx, забезпечуючи доступність
+# HTML сторінок.
+# • Контейнер у docker-compose.yml має використовувати образ Nginx, щоб виконувати роль веб-сервера для надання контенту.
+# • Прив’язані томи мають забезпечувати збереження даних при повторних запусках контейнера, зберігаючи зміни поза контейнером.
+
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./html:/usr/share/nginx/html

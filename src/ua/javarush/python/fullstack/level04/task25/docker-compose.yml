@@ -1,0 +1,58 @@
+# Networks for Service Communication
+# Create a docker-compose.yml file for a web application
+# consisting of three services: a web server, a backend, and a database.
+# The web server must be connected to the front-tier network,
+# while the database and the backend must be connected to the back-tier network.
+# The backend service must be connected to both networks.
+#
+# Requirements:
+# • A docker-compose.yml file must be created to configure a web application
+#   that includes three services: a web server, a backend, and a database.
+# • The web server must be connected to a network named front-tier,
+#   which must be reflected in the docker-compose.yml file.
+# • The database and the backend must be connected to a network named back-tier,
+#   which must be specified in the docker-compose.yml file.
+# • The backend service must be connected to both the front-tier network
+#   and the back-tier network, which must be defined in the docker-compose.yml file.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Мережі для взаємодії сервісів
+# Створіть docker-compose.yml файл для веб-застосунку,
+# що складається з трьох сервісів: веб-сервера, бекенда і бази даних.
+# Веб-сервер має бути підключений до мережі front-tier,
+# а база даних і бекенд — до мережі back-tier.
+# Сервіс бекенда повинен бути підключений до обох мереж.
+#
+# Вимоги:
+# • Файл docker-compose.yml має бути створений для конфігурації веб-застосунку, який включає три сервіси: веб-сервер,
+# бекенд і базу даних.
+# • Веб-сервер повинен бути підключений до мережі з назвою front-tier, що має бути відображено у файлі docker-compose.yml.
+# • База даних і бекенд повинні бути підключені до мережі з назвою back-tier, що має бути зазначено у файлі docker-compose.yml.
+# • Сервіс бекенда повинен бути підключений як до мережі front-tier, так і до мережі back-tier, що необхідно задати
+# у файлі docker-compose.yml.
+
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    networks:
+      - front-tier
+
+  backend:
+    image: my-backend-app:latest
+    networks:
+      - front-tier
+      - back-tier
+
+  database:
+    image: postgres:latest
+    networks:
+      - back-tier
+
+networks:
+  front-tier:
+    driver: bridge
+  back-tier:
+    driver: bridge

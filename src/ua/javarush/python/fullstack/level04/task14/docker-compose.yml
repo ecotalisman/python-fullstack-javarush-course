@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .  # Build context — current directory
+      dockerfile: Dockerfile  # Specifying the Dockerfile for the build
+    image: myapp:latest  # Name of the image created from the Dockerfile
+    container_name: myapp_container  # Container name

@@ -1,0 +1,60 @@
+# Scaling with a Database
+# Create a docker-compose.yml file for an application
+# consisting of an Nginx web server and a PostgreSQL database.
+# Scale the web server to 4 instances that interact with a single database.
+#
+# Requirements:
+# • A file named docker-compose.yml must be created to describe the infrastructure of the application,
+#   which consists of an Nginx web server and a PostgreSQL database.
+# • In docker-compose.yml, a service for the Nginx web server must be configured
+#   and scaled to 4 instances, ensuring that all instances interact with a single database.
+# • In docker-compose.yml, a service for the PostgreSQL database must be configured,
+#   which will be shared by all instances of the Nginx web server
+#   and provide them with access to the database.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Масштабування з базою даних
+# Створіть docker-compose.yml файл для застосунку,
+# що складається з веб-сервера Nginx та бази даних PostgreSQL.
+# Масштабуйте веб-сервер до 4 екземплярів, які взаємодіють з однією базою даних.
+#
+# Вимоги:
+# • Необхідно створити файл з ім'ям docker-compose.yml, який описуватиме інфраструктуру застосунку, що складається з
+# веб-сервера Nginx і бази даних PostgreSQL.
+# • У docker-compose.yml необхідно налаштувати сервіс для веб-сервера Nginx і задати його масштабування до 4 екземплярів,
+# забезпечуючи взаємодію всіх екземплярів з однією базою даних.
+# • У docker-compose.yml необхідно налаштувати сервіс для бази даних PostgreSQL, який буде єдиним для всіх екземплярів
+# веб-сервера Nginx і забезпечуватиме їм доступ до бази даних.
+
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    deploy:
+      replicas: 4
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:latest
+    deploy:
+      replicas: 1
+    environment:
+      POSTGRES_USER: exampleuser
+      POSTGRES_PASSWORD: examplepass
+      POSTGRES_DB: exampledb
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres-data:

@@ -1,0 +1,40 @@
+# Scaling Nginx
+# Create a docker-compose.yml file for an Nginx web server
+# that must be scaled to 3 instances.
+# Each instance must use ports in the range 80-82 for external access.
+#
+# Requirements:
+# • The docker-compose.yml file must be created to describe the configuration and scaling of services.
+# • The docker-compose.yml file must specify an Nginx service that is scaled to 3 instances.
+# • Each Nginx instance must be configured to use ports in the range 80-82 for external access.
+# • Docker Compose must ensure that all Nginx instances are connected to the same network for communication.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Масштабування Nginx
+# Створіть docker-compose.yml файл для веб-сервера Nginx,
+# який має бути масштабований до 3 екземплярів.
+# Кожен екземпляр повинен використовувати порти з діапазону 80-82 для зовнішнього доступу.
+#
+# Вимоги:
+# • Файл docker-compose.yml повинен бути створений для опису конфігурації та масштабування сервісів.
+# • У docker-compose.yml має бути зазначений сервіс Nginx, який масштабується до 3 екземплярів.
+# • Кожен екземпляр Nginx має бути налаштований на використання портів з діапазону 80-82 для зовнішнього доступу.
+# • Docker-compose має забезпечити, щоб усі екземпляри Nginx були підключені до однієї мережі для взаємодії.
+
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    deploy:
+      replicas: 3
+    ports:
+      - "80:80"
+      - "81:80"
+      - "82:80"
+    networks:
+      - webnet
+
+networks:
+  webnet:

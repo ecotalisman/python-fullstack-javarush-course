@@ -1,0 +1,49 @@
+# Scaling an Application with a Load Balancer
+# Create a docker-compose.yml file for a web server using Nginx as a load balancer.
+# Scale the application to 5 instances, distributing traffic between them through the Nginx load balancer.
+#
+# Requirements:
+# • The docker-compose.yml file must include a service for Nginx, which will be used as a load balancer to distribute
+# traffic between application instances.
+# • The docker-compose.yml file must configure the application to run in 5 instances, ensuring its scaling and
+# the parallel operation of multiple copies.
+# • The Nginx configuration in docker-compose.yml must be set up in such a way that traffic is distributed evenly
+# among all 5 application instances.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Масштабування додатка з балансувальником
+# Створіть docker-compose.yml файл для веб-сервера з використанням Nginx як балансувальника навантаження.
+# Масштабуйте додаток до 5 екземплярів, розподіляючи трафік між ними через балансувальник Nginx.
+#
+# Вимоги:
+# • Файл docker-compose.yml має включати сервіс для Nginx, який буде використовуватися в якості балансувальника
+# навантаження для розподілу трафіку між екземплярами додатка.
+# • Файл docker-compose.yml має налаштувати додаток таким чином, щоб він працював у 5 екземплярах, забезпечуючи його
+# масштабування та паралельну роботу декількох копій.
+# • Конфігурація Nginx у docker-compose.yml має бути налаштована таким чином, щоб трафік рівномірно розподілявся між
+# усіма 5 екземплярами додатка.
+
+version: '3.8'
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    networks:
+      - webnet
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+
+  app:
+    image: myapp:latest
+    networks:
+      - webnet
+    deploy:
+      replicas: 5
+
+networks:
+  webnet:

@@ -1,0 +1,61 @@
+# Configuring a Network for Microservices
+# Create a docker-compose.yml file that describes three services:
+# frontend, backend, and database.
+# The services must be connected to different networks:
+#
+# 1. frontend is connected to the front-tier and back-tier networks.
+# 2. backend is connected to the back-tier and db-tier networks.
+# 3. database is connected only to the db-tier network.
+#
+# Requirements:
+# • The docker-compose.yml file must contain definitions for three services: frontend, backend, and database.
+# • The frontend service must be connected to two networks: front-tier and back-tier.
+# • The backend service must be connected to two networks: back-tier and db-tier.
+# • The database service must be connected to only one network: db-tier.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Налаштування мережі для мікросервісів
+# Створіть файл docker-compose.yml, який описує три сервіси: frontend, backend і database.
+# Сервіси повинні бути підключені до різних мереж:
+#
+# 1. frontend підключений до мереж front-tier і back-tier.
+# 2. backend підключений до мереж back-tier і db-tier.
+# 3. database підключений тільки до мережі db-tier.
+#
+# Вимоги:
+# • Файл docker-compose.yml має містити опис трьох сервісів: frontend, backend і database.
+# • Сервіс frontend має бути підключений до двох мереж: front-tier і back-tier.
+# • Сервіс backend має бути підключений до двох мереж: back-tier і db-tier.
+# • Сервіс database має бути підключений лише до однієї мережі: db-tier.
+
+version: '3.8'
+
+services:
+  frontend:
+    image: nginx:alpine
+    networks:
+      - front-tier
+      - back-tier
+
+  backend:
+    image: node:alpine
+    networks:
+      - back-tier
+      - db-tier
+
+  database:
+    image: mysql:5.7
+    networks:
+      - db-tier
+
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+networks:
+  front-tier:
+    driver: bridge
+  back-tier:
+    driver: bridge
+  db-tier:
+    driver: bridge

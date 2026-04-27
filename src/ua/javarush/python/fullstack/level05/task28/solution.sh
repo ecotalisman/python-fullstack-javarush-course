@@ -33,9 +33,6 @@
 # Initializing Docker Swarm
 docker swarm init
 
-# Creating the network
-docker network create -d overlay my_overlay_network
-
 # Deploying the stack using Docker Compose
 docker stack deploy -c docker-compose.yml my_stack
 

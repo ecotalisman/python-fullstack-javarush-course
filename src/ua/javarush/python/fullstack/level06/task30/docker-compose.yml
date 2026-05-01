@@ -1,0 +1,50 @@
+# Monitoring with Prometheus and Grafana
+# Configure Prometheus and Grafana services for monitoring Docker containers.
+# Define a Docker Compose file where each of these services uses its own volume
+# for data storage.
+#
+# Requirements:
+# • A Docker Compose file must be created to start and manage
+#   the Prometheus and Grafana services.
+# • Each service, Prometheus and Grafana, must use a separate volume
+#   for storing its data.
+# • Prometheus must be configured to collect metrics from Docker containers.
+# • Both services, Prometheus and Grafana, must be isolated from each other
+#   in separate Docker containers.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Моніторинг із використанням Prometheus та Grafana
+# Налаштуйте сервіси Prometheus і Grafana для моніторингу Docker контейнерів.
+# Визначте Docker Compose файл, де кожен із цих сервісів використовує свої томи
+# для зберігання даних.
+#
+# Вимоги:
+# • Docker Compose файл має бути створений для запуску та управління сервісами Prometheus і Grafana.
+# • Кожен із сервісів (Prometheus і Grafana) має використовувати окремий том для зберігання своїх даних.
+# • Prometheus повинен бути налаштований для збору метрик із Docker контейнерів.
+# • Обидва сервіси (Prometheus і Grafana) мають бути ізольовані один від одного у окремих Docker контейнерах.
+
+version: '3.8'
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - prometheus_data:/prometheus
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana:latest
+    volumes:
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+
+volumes:
+  prometheus_data:
+  grafana_data:

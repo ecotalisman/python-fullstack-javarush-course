@@ -1,0 +1,37 @@
+# Separating Data and Code in Docker
+# Create a Docker Compose file in which the application uses separate volumes
+# for storing data and configuration files.
+# Example volumes: app_data for application data and app_config for configuration.
+#
+# Requirements:
+# • The Docker Compose file must be created to organize the application containers.
+# • The Docker Compose file must include the app_data volume for storing application data
+#   and the app_config volume for storing configuration files.
+# • The app_data and app_config volumes must be mounted into the container
+#   in the appropriate directories to ensure proper access to data and configuration.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Розділення даних і коду в Docker
+# Створіть Docker Compose файл, в якому застосунок буде використовувати окремі томи
+# для зберігання даних і конфігураційних файлів.
+# Приклад томів: app_data для даних застосунку та app_config для конфігурації.
+#
+# Вимоги:
+# • Docker Compose файл повинен бути створений для організації контейнерів застосунку.
+# • Docker Compose файл повинен включати том app_data для зберігання даних застосунку
+#   і том app_config для зберігання конфігураційних файлів.
+# • Томи app_data та app_config повинні бути змонтовані у контейнері
+#   у відповідні директорії для забезпечення правильного доступу до даних і конфігурації.
+
+version: '3.8'
+services:
+  app:
+    image: my_app_image
+    volumes:
+      - app_data:/var/lib/my_app_image/data
+      - app_config:/etc/my_app_image/config
+
+volumes:
+  app_data:
+  app_config:

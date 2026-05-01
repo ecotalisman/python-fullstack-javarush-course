@@ -1,0 +1,12 @@
+/var/log/myapp/*.log {
+    daily                 # Rotate logs every day
+    missingok             # Skip if the log file is missing
+    rotate 7              # Keep logs for the last 7 days
+    compress              # Compress old log files
+    delaycompress         # Delay compression until the next rotation
+    notifempty            # Do not process empty log files
+    create 0640 root root # Create new files with the specified permissions
+    postrotate
+        systemctl reload myapp  # Reload the service after log rotation, if necessary
+    endscript
+}

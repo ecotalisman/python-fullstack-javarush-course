@@ -1,0 +1,43 @@
+# Configuring Prometheus
+# Create and configure the prometheus.yml configuration file.
+# Set the metric collection interval to 15 seconds
+# and add jobs for collecting metrics from Prometheus itself and cAdvisor.
+#
+# Requirements:
+# • The script must include a configuration file named prometheus.yml,
+#   which will be used to configure Prometheus.
+# • The prometheus.yml configuration file must be configured
+#   to collect metrics every 15 seconds.
+# • The prometheus.yml configuration file must contain a job
+#   for collecting metrics directly from Prometheus itself.
+# • The prometheus.yml configuration file must include a job
+#   for collecting metrics from cAdvisor.
+#
+# ## 🇺🇦 Ukrainian version:
+#
+# Налаштування Prometheus
+# Створіть і налаштуйте файл конфігурації prometheus.yml.
+# Встановіть інтервал збору метрик у 15 секунд
+# і додайте завдання для збору метрик із самого Prometheus і cAdvisor.
+#
+# Вимоги:
+# • Скрипт повинен включати файл конфігурації з іменем prometheus.yml,
+#   який буде використовуватися для налаштування Prometheus.
+# • Файл конфігурації prometheus.yml має бути налаштований
+#   на збирання метрик кожні 15 секунд.
+# • Файл конфігурації prometheus.yml має містити завдання
+#   для збору метрик безпосередньо з самого Prometheus.
+# • Файл конфігурації prometheus.yml має включати завдання
+#   для збору метрик із cAdvisor.
+
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']    # Address where Prometheus is running
+
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['localhost:8080']    # Address where cAdvisor is running

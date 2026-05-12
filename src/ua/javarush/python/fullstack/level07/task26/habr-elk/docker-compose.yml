@@ -25,6 +25,9 @@ services:
 
   filebeat:
     image: elastic/filebeat:7.9.1
+    # Windows fix: file mounted from Windows gets rwxrwxrwx permissions,
+    # which Filebeat rejects. -strict.perms=false disables this safety check.
+    command: filebeat -e -strict.perms=false
     restart: unless-stopped
     depends_on:
       - elasticsearch

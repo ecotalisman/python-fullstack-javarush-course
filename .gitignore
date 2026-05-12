@@ -6,3 +6,7 @@ venv/
 # Ignore Python compiled files
 *.pyc
 __pycache__/
+
+# habr-elk runtime files
+src/ua/javarush/python/fullstack/level07/task26/habr-elk/logs/
+src/ua/javarush/python/fullstack/level07/task26/habr-elk/docker-compose.yml.backup

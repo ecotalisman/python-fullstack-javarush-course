@@ -1,0 +1,55 @@
+# Optimizing Prometheus Performance
+# This config addresses the three optimization requirements:
+# 1. Increased scrape_interval to reduce system load
+# 2. Multiple jobs to distribute metric sources
+# 3. Resource limits (set via docker-compose.yml or systemd)
+
+global:
+  # Requirement 1: Increased scrape_interval from default 15s to 60s
+  # This reduces the frequency of metric collection and lowers CPU/memory load
+  scrape_interval: 60s
+  evaluation_interval: 60s
+
+# Requirement 2: Split metric sources across multiple jobs
+# Each job represents a separate group of targets, allowing distribution
+# across different Prometheus instances if needed
+scrape_configs:
+
+  # Job 1: Application metrics (can be moved to dedicated Prometheus instance on :9091)
+  - job_name: 'apps'
+    scrape_interval: 60s
+    static_configs:
+      - targets:
+          - 'app1:9100'
+          - 'app2:9100'
+
+  # Job 2: Infrastructure metrics (can be moved to dedicated Prometheus instance on :9092)
+  - job_name: 'infrastructure'
+    scrape_interval: 60s
+    static_configs:
+      - targets:
+          - 'node-exporter:9100'
+          - 'cadvisor:8080'
+
+  # Job 3: Database metrics
+  - job_name: 'databases'
+    scrape_interval: 120s  # Less critical, larger interval
+    static_configs:
+      - targets:
+          - 'postgres-exporter:9187'
+          - 'mysql-exporter:9104'
+
+# Requirement 3: Resource limits
+# Resource limits for the Prometheus container should be set in docker-compose.yml:
+#
+# services:
+#   prometheus:
+#     image: prom/prometheus
+#     deploy:
+#       resources:
+#         limits:
+#           cpus: '2'
+#           memory: 4G
+#         reservations:
+#           cpus: '1'
+#           memory: 2G

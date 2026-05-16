@@ -1,0 +1,79 @@
+# Creating Containers with Docker Compose
+#
+# Create a docker-compose.yml file that runs three containers for your application:
+# a ReactJS frontend, a Flask backend, and a PostgreSQL database.
+# Configure their interaction with each other.
+#
+# Requirements:
+#
+# 1. A file named docker-compose.yml must be created and used to describe
+#    and manage the container configuration.
+# 2. The docker-compose.yml file must contain settings for running a container
+#    in which the ReactJS application will be deployed.
+# 3. The docker-compose.yml file must contain settings for running a container
+#    in which the Flask application will be deployed.
+# 4. The docker-compose.yml file must contain settings for running a container
+#    with the PostgreSQL database.
+# 5. The docker-compose.yml file must include the necessary settings to ensure
+#    interaction between the ReactJS and Flask applications and the PostgreSQL database.
+#
+# 🇺🇦 Ukrainian version:
+#
+# Створення контейнерів з Docker Compose
+#
+# Створіть файл docker-compose.yml, який запускає три контейнери для вашого додатка:
+# фронтенд на ReactJS, бекенд на Flask і базу даних PostgreSQL.
+# Налаштуйте їх взаємодію одне з одним.
+#
+# Вимоги:
+#
+# 1. Необхідно створити файл з ім'ям docker-compose.yml, який буде використовуватись
+#    для опису та управління конфігурацією контейнерів.
+# 2. Файл docker-compose.yml має містити налаштування для запуску контейнера,
+#    у якому буде розгорнуто додаток на ReactJS.
+# 3. Файл docker-compose.yml має містити налаштування для запуску контейнера,
+#    у якому буде розгорнуто додаток на Flask.
+# 4. Файл docker-compose.yml має містити налаштування для запуску контейнера
+#    з базою даних PostgreSQL.
+# 5. Файл docker-compose.yml має включати необхідні налаштування для забезпечення
+#    взаємодії додатка на ReactJS і Flask з базою даних PostgreSQL.
+
+version: '3.8'
+
+services:
+  frontend:
+    image: node:22.22.3-alpine3.23
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: sh -c "npm install && npm start"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    image: python:3.12-alpine3.23
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    command: sh -c "pip install -r requirements.txt && flask run --host=0.0.0.0"
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@db:5432/app_db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16.14-alpine3.23
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=app_db
+
+volumes:
+  db_data:

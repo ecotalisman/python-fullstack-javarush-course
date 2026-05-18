@@ -1,0 +1,27 @@
+## Implementing a CRUD API for Tasks
+
+Create an API for managing tasks using CRUD operations with Flask. Implement functions for creating, retrieving, updating, and deleting tasks.
+
+### Requirements:
+
+1. The API must include a function for adding a new task, which accepts task data and stores it in the storage.
+2. The API must include functionality for retrieving a list of all tasks or a single task by its identifier.
+3. The API must provide the ability to update information about an existing task by passing modified data.
+4. The API must include a function for deleting a task by its identifier from the storage.
+5. The application must be developed using the Flask web framework to handle HTTP requests.
+
+## 🇺🇦 Ukrainian version:
+
+## Реалізація CRUD API для задач
+
+Створіть API для управління задачами (CRUD-операції) за допомогою Flask. Реалізуйте функції створення, отримання, оновлення та видалення задач.
+
+### Вимоги:
+
+1. API повинно включати функцію для додавання нової задачі, яка приймає дані про задачу і зберігає їх у сховищі.
+2. API повинно містити функціональність для отримання списку всіх задач або окремої задачі за ідентифікатором.
+3. API повинно передбачати можливість оновлення інформації про існуючу задачу шляхом передання змінених даних.
+4. API повинно включати функцію для видалення задачі за її ідентифікатором із сховища.
+5. Додаток повинен бути розроблений із використанням веб-фреймворку Flask для обробки HTTP-запитів.
+
+Flask==2.0.1

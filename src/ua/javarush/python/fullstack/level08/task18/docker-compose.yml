@@ -1,0 +1,51 @@
+# Connecting Services to the Network
+#
+# Connect the frontend, backend, and database services to the app-network network.
+# Each service must use this network in the docker-compose.yml file.
+#
+# Requirements:
+#
+# 1. The frontend service must be connected to the app-network network
+#    in the docker-compose.yml file.
+# 2. The backend service must be connected to the app-network network
+#    in the docker-compose.yml file.
+# 3. The database service must be connected to the app-network network
+#    in the docker-compose.yml file.
+#
+# 🇺🇦 Ukrainian version:
+#
+# Підключення сервісів до мережі
+#
+# Підключіть сервіси frontend, backend і database до мережі app-network.
+# Кожен сервіс має використовувати дану мережу у файлі docker-compose.yml.
+#
+# Вимоги:
+#
+# 1. Сервіс frontend повинен бути підключений до мережі app-network
+#    у файлі docker-compose.yml.
+# 2. Сервіс backend повинен бути підключений до мережі app-network
+#    у файлі docker-compose.yml.
+# 3. Сервіс database повинен бути підключений до мережі app-network
+#    у файлі docker-compose.yml.
+
+version: '3.8'
+
+services:
+  frontend:
+    image: frontend-image
+    networks:
+      - app-network
+
+  backend:
+    image: backend-image
+    networks:
+      - app-network
+
+  database:
+    image: database-image
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

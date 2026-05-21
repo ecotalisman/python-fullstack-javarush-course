@@ -1,0 +1,85 @@
+# Full Configuration and Running of All Services
+#
+# Create a complete docker-compose.yml file that includes three services:
+# frontend, backend, and database.
+# Each service must be configured with ports, networks, and volumes
+# as described in the lecture.
+# Run all services with a single command.
+#
+# Requirements:
+#
+# 1. A file named docker-compose.yml must be created and contain
+#    the configuration for three services: frontend, backend, and database.
+# 2. Each service must be configured with the appropriate ports,
+#    which must be defined in the docker-compose.yml file.
+# 3. Networks and volumes must be configured in the docker-compose.yml file
+#    for all three services: frontend, backend, and database,
+#    as described in the lecture.
+# 4. All three services, frontend, backend, and database,
+#    must be started with a single docker compose up command.
+#
+# 🇺🇦 Ukrainian version:
+#
+# Повна настройка і запуск усіх сервісів
+#
+# Створіть повний файл docker-compose.yml, який буде включати три сервіси:
+# frontend, backend і database.
+# Кожен сервіс має бути налаштований з портами, мережами і томами,
+# як описано в лекції.
+# Запустіть усі сервіси однією командою.
+#
+# Вимоги:
+#
+# 1. Необхідно створити файл з ім'ям docker-compose.yml,
+#    який буде містити конфігурацію для трьох сервісів:
+#    frontend, backend і database.
+# 2. Кожен із сервісів має бути налаштований з відповідними портами,
+#    які потрібно задати у файлі docker-compose.yml.
+# 3. У файлі docker-compose.yml потрібно налаштувати мережі та томи
+#    для всіх трьох сервісів: frontend, backend і database,
+#    як це описано в лекції.
+# 4. Усі три сервіси, frontend, backend і database,
+#    повинні бути запущені однією командою docker compose up.
+
+version: '3.8'
+
+services:
+  frontend:
+    image: nginx:1.30-alpine3.23
+    ports:
+      - "3000:3000"
+    networks:
+      - mynetwork
+    volumes:
+      - frontend_data:/usr/share/nginx/html
+
+  backend:
+    image: python:3.12-alpine3.23
+    ports:
+      - "5000:5000"
+    networks:
+      - mynetwork
+    volumes:
+      - backend_data:/usr/src/app
+
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  frontend_data:
+  backend_data:
+  db_data:

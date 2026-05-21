@@ -1,0 +1,57 @@
+# Configuring a PostgreSQL Database
+#
+# Configure a service for the PostgreSQL database in the docker-compose.yml file.
+# Use the official postgres:13 image.
+# Set environment variables to create the database and user.
+# Configure a volume to persist data and connect the service to the network.
+#
+# Requirements:
+#
+# 1. The docker-compose.yml file must use the official postgres:13 image
+#    to configure the PostgreSQL service.
+# 2. Environment variables must be set to create the database and user,
+#    such as POSTGRES_DB, POSTGRES_USER, and POSTGRES_PASSWORD.
+# 3. A volume must be configured to store PostgreSQL data to ensure
+#    data persistence when the container is restarted.
+# 4. The PostgreSQL service must be connected to the defined network
+#    to ensure interaction with other containers.
+#
+# 🇺🇦 Ukrainian version:
+#
+# Налаштування бази даних PostgreSQL
+#
+# Налаштуйте сервіс для бази даних PostgreSQL у файлі docker-compose.yml.
+# Використовуйте офіційний образ postgres:13.
+# Встановіть змінні середовища для створення бази даних і користувача.
+# Налаштуйте том для збереження даних і підключіть сервіс до мережі.
+#
+# Вимоги:
+#
+# 1. У файлі docker-compose.yml повинен використовуватися офіційний образ postgres:13
+#    для налаштування сервісу PostgreSQL.
+# 2. Повинні бути встановлені змінні середовища для створення бази даних і користувача,
+#    такі як POSTGRES_DB, POSTGRES_USER та POSTGRES_PASSWORD.
+# 3. Повинен бути налаштований том для збереження даних PostgreSQL,
+#    щоб забезпечити збереження даних при перезапуску контейнера.
+# 4. Сервіс PostgreSQL повинен бути підключений до визначеної мережі,
+#    щоб забезпечити взаємодію з іншими контейнерами.
+
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: taskdb
+      POSTGRES_USER: taskuser
+      POSTGRES_PASSWORD: taskpassword
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+
+volumes:
+  pgdata:
+
+networks:
+  mynetwork:

@@ -1,0 +1,57 @@
+# Creating a Network for Containers
+#
+# Create a network named app-network in the docker-compose.yml file,
+# which will be used for communication between the frontend,
+# backend, and database.
+# The network must be of the bridge type.
+# Add the network configuration to the docker-compose.yml file.
+#
+# Requirements:
+#
+# 1. A network named app-network must be defined
+#    in the docker-compose.yml file.
+# 2. The app-network network must be of the bridge type
+#    for communication between containers.
+# 3. The app-network network must be used for communication
+#    between the frontend, backend, and database containers.
+#
+# 🇺🇦 Ukrainian version:
+#
+# Створення мережі для контейнерів
+#
+# Створіть мережу з ім'ям app-network у файлі docker-compose.yml,
+# яка буде використовуватися для зв'язку між фронтендом,
+# бекендом і базою даних.
+# Мережа повинна бути типу bridge.
+# Додайте налаштування мережі у файл docker-compose.yml.
+#
+# Вимоги:
+#
+# 1. У файлі docker-compose.yml повинна бути визначена мережа
+#    з ім'ям app-network.
+# 2. Мережа app-network повинна бути типу bridge
+#    для зв'язку між контейнерами.
+# 3. Мережа app-network повинна бути використана для зв'язку
+#    між контейнерами фронтенду, бекенду та бази даних.
+
+version: '3.8'
+
+services:
+  frontend:
+    image: frontend-image
+    networks:
+      - app-network
+
+  backend:
+    image: backend-image
+    networks:
+      - app-network
+
+  database:
+    image: database-image
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

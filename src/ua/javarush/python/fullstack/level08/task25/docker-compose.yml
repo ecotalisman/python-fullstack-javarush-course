@@ -1,0 +1,75 @@
+# Configuring Prometheus Monitoring
+#
+# Configure monitoring for your multi-container application using Prometheus.
+# Use the prometheus.yml configuration file to collect metrics
+# from the frontend and backend services, available on ports 3000 and 5000 respectively.
+# Create a Dockerfile for Prometheus and add it to docker-compose.yml.
+#
+# Requirements:
+#
+# 1. The prometheus.yml configuration file must be created and configured
+#    to collect metrics from the frontend and backend services,
+#    available on ports 3000 and 5000 respectively.
+# 2. A Dockerfile for Prometheus must be created and used
+#    to build a Docker image.
+#    This file must include instructions for installing and configuring Prometheus.
+# 3. The docker-compose.yml file must be updated to include the Prometheus service.
+#    This includes adding a section for Prometheus where the created Dockerfile
+#    and the required configuration will be specified.
+# 4. Make sure that Prometheus can communicate with the frontend and backend services
+#    through the specified ports: 3000 and 5000.
+#    This may require network configuration in docker-compose.yml.
+#
+# 🇺🇦 Ukrainian version:
+#
+# Налаштування моніторингу Prometheus
+#
+# Налаштуйте моніторинг вашого багатоконтейнерного застосунку
+# за допомогою Prometheus.
+# Використовуйте файл конфігурації prometheus.yml, щоб збирати метрики
+# із сервісів frontend і backend, доступних на портах 3000 і 5000 відповідно.
+# Створіть Dockerfile для Prometheus і додайте його в docker-compose.yml.
+#
+# Вимоги:
+#
+# 1. Файл конфігурації prometheus.yml має бути створеним і налаштованим
+#    для збору метрик із сервісів frontend і backend,
+#    доступних на портах 3000 і 5000 відповідно.
+# 2. Необхідно створити Dockerfile для Prometheus,
+#    який буде використовуватися для створення Docker-образу.
+#    Цей файл має включати інструкції щодо встановлення та налаштування Prometheus.
+# 3. Файл docker-compose.yml має бути оновленим
+#    для включення сервісу Prometheus.
+#    Це включає додавання секції для Prometheus,
+#    де буде вказаний створений Dockerfile і необхідний конфігур.
+# 4. Переконайтеся, що Prometheus може взаємодіяти
+#    із сервісами frontend і backend через вказані порти: 3000 і 5000.
+#    Це може вимагати налаштування мережі в docker-compose.yml.
+
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - monitoring
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    networks:
+      - monitoring
+
+  prometheus:
+    build: ./prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
+    driver: bridge

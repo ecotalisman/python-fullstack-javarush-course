@@ -1,0 +1,91 @@
+# Logging with the ELK Stack
+#
+# Configure logging for your application using the ELK Stack:
+# Elasticsearch, Logstash, and Kibana.
+# Install Logstash to process Docker logs,
+# and Kibana to visualize them.
+# Use Filebeat to collect container logs.
+#
+# Requirements:
+#
+# 1. Elasticsearch must be installed and configured
+#    to store logs received from Logstash.
+# 2. Logstash must be installed and configured
+#    to process logs received from Docker containers.
+# 3. Filebeat must be installed and configured
+#    to collect logs from Docker containers and forward them to Logstash.
+# 4. Kibana must be installed and configured
+#    to visualize logs stored in Elasticsearch.
+# 5. All components, Elasticsearch, Logstash, Filebeat, and Kibana,
+#    must be integrated to ensure the complete cycle of collecting,
+#    processing, storing, and visualizing logs.
+#
+# 🇺🇦 Ukrainian version:
+#
+# Логування з ELK Stack
+#
+# Налаштуйте логування вашого додатка за допомогою ELK Stack:
+# Elasticsearch, Logstash, Kibana.
+# Встановіть Logstash для обробки логів Docker,
+# а Kibana — для їх візуалізації.
+# Використовуйте Filebeat для збору логів контейнерів.
+#
+# Вимоги:
+#
+# 1. Elasticsearch має бути встановлений та налаштований
+#    для зберігання логів, що надходять від Logstash.
+# 2. Logstash має бути встановлений та налаштований
+#    для обробки логів, що надходять від Docker-контейнерів.
+# 3. Filebeat має бути встановлений та налаштований
+#    для збору логів Docker-контейнерів і передачі їх у Logstash.
+# 4. Kibana має бути встановлена та налаштована
+#    для візуалізації логів, що зберігаються в Elasticsearch.
+# 5. Усі компоненти, Elasticsearch, Logstash, Filebeat, Kibana,
+#    мають бути інтегровані для забезпечення повного циклу збору,
+#    обробки, зберігання та візуалізації логів.
+
+version: '7'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+    networks:
+      - elk
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.15.0
+    container_name: logstash
+    volumes:
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    ports:
+      - "5044:5044"
+    networks:
+      - elk
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.9.2
+    container_name: kibana
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    networks:
+      - elk
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.15.0
+    container_name: filebeat
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
+    networks:
+      - elk
+
+networks:
+  elk:
+    driver: bridge

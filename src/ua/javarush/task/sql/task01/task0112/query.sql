@@ -1,0 +1,24 @@
+-- Less Than or Equal Operator
+--
+-- Select the contents of the id, salary, and department columns
+-- from the employee table in the specified order,
+-- where the salary field value is less than or equal to 1594.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор менше дорівнює
+--
+-- Вибрати вміст колонок id, salary, department
+-- у вказаному порядку з таблиці employee,
+-- у яких значення поля salary менше або дорівнює 1594.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT id, salary, department FROM employee WHERE salary <= 1594;

@@ -1,0 +1,24 @@
+-- Not Equal Operator !=
+--
+-- Write a SELECT query from the employee table using *
+-- for all employees whose salary field value is not equal to 3200.
+-- Use !=
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор не дорівнює !=
+--
+-- Напиши запит вибору з таблиці employee, використовуючи *,
+-- всіх співробітників, у яких значення поля salary не дорівнює 3200.
+-- Використовуй !=
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM employee WHERE salary != 3200;

@@ -1,0 +1,22 @@
+-- Equals Operator
+--
+-- Write a SELECT query from the users table using *
+-- for all users whose age field value is equal to 25.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор дорівнює
+--
+-- Напиши запит вибору з таблиці users, використовуючи *,
+-- всіх користувачів, у яких значення поля age дорівнює 25.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM users WHERE age = 25;

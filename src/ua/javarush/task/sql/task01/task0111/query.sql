@@ -1,0 +1,22 @@
+-- Greater Than Operator
+--
+-- Write a SELECT query from the employee table using *
+-- for all employees whose salary field value is strictly greater than 2000.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор більше
+--
+-- Напиши запит вибору з таблиці employee, використовуючи *,
+-- всіх співробітників, у яких значення поля salary строго більше 2000.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM employee WHERE salary > 2000;

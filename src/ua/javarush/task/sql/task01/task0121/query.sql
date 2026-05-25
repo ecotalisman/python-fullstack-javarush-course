@@ -1,0 +1,27 @@
+-- BETWEEN Operator
+--
+-- Select all columns from the car table using *,
+-- where the value of the difference between quantity
+-- and booked_quantity is BETWEEN 10 and 100 inclusive.
+-- Use the BETWEEN operator.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор BETWEEN
+--
+-- Вибрати з таблиці car всі колонки, використовуючи *,
+-- у яких значення різниці кількості quantity
+-- та заброньованої кількості booked_quantity
+-- МІЖ 10 та 100 включно.
+-- Використовуй оператор BETWEEN.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM car WHERE quantity - booked_quantity BETWEEN 10 AND 100;

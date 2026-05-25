@@ -1,0 +1,24 @@
+-- IN Operator
+--
+-- Select all columns from the car table using *,
+-- where the brand field value is ONE OF: renault, opel, seat, skoda.
+-- Use the IN operator.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор IN
+--
+-- Вибрати з таблиці car всі колонки, використовуючи *,
+-- які мають значення поля brand ОДНЕ З: renault, opel, seat, skoda.
+-- Використовуй оператор IN.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM car WHERE brand IN ('renault', 'opel', 'seat', 'skoda');

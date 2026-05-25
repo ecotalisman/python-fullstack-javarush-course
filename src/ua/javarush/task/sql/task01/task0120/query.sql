@@ -1,0 +1,24 @@
+-- BETWEEN Operator
+--
+-- Select all columns from the employee table using *,
+-- where the salary field value is BETWEEN 1000 and 5000 inclusive.
+-- Use the BETWEEN operator.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор BETWEEN
+--
+-- Вибрати з таблиці employee всі стовпчики, використовуючи *,
+-- у яких значення поля salary МІЖ 1000 і 5000 включно.
+-- Використовуй оператор BETWEEN.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM employee WHERE salary BETWEEN 1000 AND 5000;

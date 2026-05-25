@@ -1,0 +1,28 @@
+-- AND NOT Operator
+--
+-- Select the contents of the department, salary, and name columns
+-- from the employee table in the specified order,
+-- where the salary field value is strictly greater than 2200
+-- AND the department field value is not equal to qa.
+-- Use AND NOT.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор AND NOT
+--
+-- Вибрати з таблиці employee вміст колонок department, salary, name
+-- у вказаному порядку,
+-- у яких значення поля salary строго більше 2200
+-- І значення поля department не дорівнює qa.
+-- Використовуй AND NOT.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT department, salary, name FROM employee WHERE salary >= 2200 AND NOT department = 'qa';

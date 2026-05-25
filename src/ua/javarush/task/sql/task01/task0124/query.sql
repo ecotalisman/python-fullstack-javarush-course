@@ -1,0 +1,26 @@
+-- LIKE Operator
+--
+-- Select the brand, model, and booked_quantity columns
+-- from the car table in the specified order,
+-- where the model field value starts with the letter k.
+-- Use the LIKE operator.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор LIKE
+--
+-- Вибрати з таблиці car стовпчики brand, model, booked_quantity
+-- у вказаному порядку,
+-- у яких значення поля model починається на букву k.
+-- Використовуй оператор LIKE.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT brand, model, booked_quantity FROM car WHERE model LIKE 'k%';

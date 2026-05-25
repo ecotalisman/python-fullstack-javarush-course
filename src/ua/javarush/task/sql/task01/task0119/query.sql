@@ -1,0 +1,24 @@
+-- OR Operator
+--
+-- Select all columns from the employee table using *,
+-- where the department field value is dev or qa.
+-- Do not use the IN operator in the query.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор OR
+--
+-- Вибрати з таблиці employee всі колонки, використовуючи *,
+-- у яких значення поля department dev або qa.
+-- Не використовуй оператор IN у запиті.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM employee WHERE department = 'dev' OR department = 'qa';

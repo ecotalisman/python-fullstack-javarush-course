@@ -1,0 +1,26 @@
+-- AND Operator
+--
+-- Select the contents of the id, salary, department, and name columns
+-- from the employee table in the specified order,
+-- where the salary field value is strictly less than 5000
+-- AND the department field value is equal to dev.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор AND
+--
+-- Вибрати з таблиці employee вміст колонок id, salary, department, name
+-- у вказаному порядку,
+-- у яких значення поля salary строго менше 5000
+-- І значення поля department дорівнює dev.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT id, salary, department, name FROM employee WHERE salary < 5000 AND department = 'dev';

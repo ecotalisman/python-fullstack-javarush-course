@@ -1,0 +1,29 @@
+-- NOT LIKE Operator
+--
+-- Select the brand, model, and booked_quantity columns
+-- from the car table in the specified order,
+-- where the model field value does not contain
+-- the combination of letters ea.
+-- The letters are lowercase Latin letters.
+-- Use the NOT LIKE operator.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор NOT LIKE
+--
+-- Вибрати з таблиці car колонки brand, model, booked_quantity
+-- у вказаному порядку,
+-- у яких значення поля model не містить комбінації букв ea.
+-- Літери — латиниця, малі.
+-- Використай оператор NOT LIKE.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT brand, model, booked_quantity FROM car WHERE model NOT LIKE '%ea%';

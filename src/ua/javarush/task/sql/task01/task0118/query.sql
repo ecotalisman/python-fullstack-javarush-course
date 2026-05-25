@@ -1,0 +1,28 @@
+-- OR Operator
+--
+-- Select the contents of the department, salary, and name columns
+-- from the employee table in the specified order,
+-- where the salary field value is strictly less than 1000
+-- OR the salary field value is greater than or equal to 5000.
+-- Use OR.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор OR
+--
+-- Вибрати з таблиці employee вміст колонок department, salary, name
+-- у вказаному порядку,
+-- у яких значення поля salary строго менше 1000
+-- АБО значення поля salary більше або дорівнює 5000.
+-- Використовуй OR.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT department, salary, name FROM employee WHERE salary < 1000 OR salary >= 5000;

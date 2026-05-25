@@ -1,0 +1,22 @@
+-- Selecting All Table Contents
+--
+-- Select the contents of all columns using *
+-- from the brand table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Вибір всього вмісту таблиці
+--
+-- Вибрати вміст всіх колонок, використовуючи *,
+-- із таблиці brand.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM brand;

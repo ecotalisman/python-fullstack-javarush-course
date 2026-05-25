@@ -1,0 +1,22 @@
+-- First Query
+--
+-- Select the contents of the id, name, and age columns
+-- from the employee table in the specified order.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Перший запит
+--
+-- Вибрати вміст колонок id, name, age
+-- у вказаному порядку з таблиці employee.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT id, name, age FROM employee;

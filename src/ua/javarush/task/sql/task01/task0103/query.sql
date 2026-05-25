@@ -1,0 +1,22 @@
+-- Selecting Data by Columns
+--
+-- Select the contents of the id, brand_logo, and brand_name columns
+-- from the brand table in the specified order.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Вибір даних за колонками
+--
+-- Вибрати вміст колонок id, brand_logo, brand_name
+-- у вказаному порядку з таблиці brand.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT id, brand_logo, brand_name FROM brand;

@@ -1,0 +1,22 @@
+-- Selecting Data by Columns
+--
+-- Select the contents of the id, name, and smth columns
+-- from the employee table in the specified order.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Вибір даних за колонками
+--
+-- Вибрати вміст колонок id, name, smth
+-- у вказаному порядку з таблиці employee.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT id, name, smth FROM employee;

@@ -1,0 +1,25 @@
+-- DISTINCT Operator
+--
+-- Select all unique values from the country_name column
+-- from the ip2country table,
+-- where country_name does not contain a space character.
+-- The DISTINCT, WHERE, and NOT LIKE operators must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор DISTINCT
+--
+-- Вибрати з таблиці ip2country всі унікальні значення колонки country_name,
+-- у яких у назві, тобто колонці country_name, немає символу пробіл.
+-- Потрібно використовувати: DISTINCT, WHERE та NOT LIKE.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT DISTINCT country_name FROM ip2country WHERE country_name NOT LIKE '% %';

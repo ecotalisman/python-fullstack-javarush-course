@@ -1,0 +1,24 @@
+-- DISTINCT Operator
+--
+-- Select all unique values from the country_code column
+-- from the ip2country table.
+-- The DISTINCT operator must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор DISTINCT
+--
+-- Вибрати всі унікальні значення колонки country_code
+-- із таблиці ip2country.
+-- Потрібно використовувати: DISTINCT.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT DISTINCT country_code FROM ip2country;

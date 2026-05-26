@@ -1,0 +1,30 @@
+-- Sorting by Multiple Columns
+--
+-- Select the description column from the parts table.
+-- Sort the result by the required field in descending order,
+-- by the identifier field in descending order,
+-- and by the description field in descending order.
+-- Skip the first 23 rows.
+-- The ORDER BY, DESC, and OFFSET operators must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сортування за кількома колонками
+--
+-- Вибрати стовпчик description з таблиці parts.
+-- Результат відсортувати за полем required — за спаданням,
+-- за полем identifier — за спаданням
+-- і за полем description — за спаданням.
+-- Пропусти перші 23 рядки.
+-- Потрібно використовувати: ORDER BY, DESC, OFFSET.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT description FROM parts ORDER BY required DESC, identifier DESC, description DESC OFFSET 23;

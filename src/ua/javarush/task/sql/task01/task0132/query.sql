@@ -1,0 +1,26 @@
+-- OFFSET Operator
+--
+-- Select the country_code, ip_from, and ip_to columns
+-- from the ip2country table in the specified order.
+-- During selection, skip the first 78 rows.
+-- The OFFSET operator must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор OFFSET
+--
+-- Вибрати з таблиці ip2country колонки country_code, ip_from, ip_to
+-- у вказаному порядку.
+-- Під час вибору пропусти перші 78 рядків.
+-- Потрібно використати: OFFSET.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT country_code, ip_from, ip_to FROM ip2country OFFSET 78;

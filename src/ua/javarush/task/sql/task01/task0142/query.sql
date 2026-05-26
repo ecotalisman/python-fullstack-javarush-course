@@ -1,0 +1,30 @@
+-- Sorting by Multiple Columns
+--
+-- Select the id, identifier, and description columns
+-- from the parts table in the specified order.
+-- Sort the result by the identifier field in descending order,
+-- by the required field in descending order,
+-- and by the description field in ascending order.
+-- The ORDER BY, DESC, and ASC operators must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сортування за кількома колонками
+--
+-- Вибрати з таблиці parts колонки id, identifier, description
+-- у вказаному порядку.
+-- Результат відсортувати за полем identifier — за спаданням,
+-- за полем required — за спаданням
+-- і за полем description — за зростанням.
+-- Потрібно використовувати: ORDER BY, DESC, ASC.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT id, identifier, description FROM parts ORDER BY identifier DESC, description ASC;

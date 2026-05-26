@@ -1,0 +1,26 @@
+-- LIMIT and OFFSET Operators
+--
+-- Select all columns from the ip2country table using *.
+-- During selection, skip the first 62 rows.
+-- Only 7 rows must be selected.
+-- The LIMIT and OFFSET operators must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператори OFFSET та LIMIT
+--
+-- Вибрати з таблиці ip2country всі стовпчики, використовуючи *.
+-- Під час вибору пропусти перші 62 рядки.
+-- Вибрати потрібно лише 7 рядків.
+-- Потрібно використовувати: LIMIT та OFFSET.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM ip2country LIMIT 7 OFFSET 62;

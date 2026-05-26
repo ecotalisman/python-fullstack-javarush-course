@@ -1,0 +1,24 @@
+-- LIMIT Operator
+--
+-- Select all columns from the car table using *.
+-- Only the first three records must be selected.
+-- The LIMIT operator must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор LIMIT
+--
+-- Вибрати всі колонки з таблиці car, використовуючи *.
+-- Вибрати потрібно лише перші три записи.
+-- Потрібно використовувати: LIMIT.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM car LIMIT 3;

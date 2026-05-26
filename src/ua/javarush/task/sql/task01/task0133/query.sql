@@ -1,0 +1,28 @@
+-- LIMIT and OFFSET Operators
+--
+-- Select the country_code, ip_from, and ip_to columns
+-- from the ip2country table in the specified order.
+-- During selection, skip the first 33 rows.
+-- Only 12 rows must be selected.
+-- The LIMIT and OFFSET operators must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператори OFFSET та LIMIT
+--
+-- Вибрати з таблиці ip2country колонки country_code, ip_from, ip_to
+-- у вказаному порядку.
+-- Під час вибору пропусти перші 33 рядки.
+-- Вибрати потрібно лише 12 рядків.
+-- Потрібно використовувати: LIMIT та OFFSET.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT country_code, ip_from, ip_to FROM ip2country LIMIT 12 OFFSET 33 ;

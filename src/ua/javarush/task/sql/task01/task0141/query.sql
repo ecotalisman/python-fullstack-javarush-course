@@ -1,0 +1,26 @@
+-- Sorting by Multiple Columns
+--
+-- Select all columns from the parts table using *.
+-- Sort the result by the required field in descending order,
+-- and by the id field in ascending order.
+-- The ORDER BY, DESC, and ASC operators must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сортування за кількома колонками
+--
+-- Вибрати всі колонки з таблиці parts, використовуючи *.
+-- Результат відсортуй за полем required у спадному порядку,
+-- і за полем id — у порядку зростання.
+-- Потрібно використовувати: ORDER BY, DESC, ASC.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM parts ORDER BY required DESC , id ASC;

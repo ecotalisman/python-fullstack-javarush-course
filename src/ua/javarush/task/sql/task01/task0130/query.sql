@@ -1,0 +1,26 @@
+-- LIMIT Operator
+--
+-- Select the brand, model, and quantity columns
+-- from the car table in the specified order.
+-- Only the first 115 records must be selected.
+-- The LIMIT operator must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор LIMIT
+--
+-- Вибрати з таблиці car стовпчики brand, model, quantity
+-- у вказаному порядку.
+-- Вибрати потрібно лише перших 115 записів.
+-- Потрібно використовувати: LIMIT.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT brand, model, quantity FROM car LIMIT 115;

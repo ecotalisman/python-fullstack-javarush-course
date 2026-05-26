@@ -1,0 +1,28 @@
+-- Sorting the Result (ORDER BY)
+--
+-- Select the country_code, ip_from, and ip_to columns
+-- from the ip2country table in the specified order.
+-- Sort the result by the ip_from column in ascending order.
+-- Only 17 rows must be selected.
+-- The ORDER BY, ASC, and LIMIT operators must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сортування результату (ORDER BY)
+--
+-- Вибрати з таблиці ip2country колонки country_code, ip_from, ip_to
+-- у вказаному порядку.
+-- Результат відсортуй за колонкою ip_from у порядку зростання.
+-- Вибрати потрібно лише 17 рядків.
+-- Потрібно використовувати: ORDER BY, ASC, LIMIT.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT country_code, ip_from, ip_to FROM ip2country ORDER BY ip_from ASC LIMIT 17;

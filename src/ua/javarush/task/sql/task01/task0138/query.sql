@@ -1,0 +1,24 @@
+-- Sorting the Result (ORDER BY)
+--
+-- Select all columns from the ip2country table using *.
+-- Sort the result by the ip_from column.
+-- The ORDER BY operator must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сортування результату (ORDER BY)
+--
+-- Вибрати всі стовпчики з таблиці ip2country, використовуючи *.
+-- Результат відсортуй за колонкою ip_from.
+-- Потрібно використати: ORDER BY.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM ip2country ORDER BY ip_from;

@@ -1,0 +1,24 @@
+-- OFFSET Operator
+--
+-- Select all columns from the ip2country table using *.
+-- During selection, skip the first 50 rows.
+-- The OFFSET operator must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оператор OFFSET
+--
+-- Вибрати з таблиці ip2country всі стовпчики, використовуючи *.
+-- Під час вибору пропусти перші 50 рядків.
+-- Потрібно використати: OFFSET.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM ip2country OFFSET 50;

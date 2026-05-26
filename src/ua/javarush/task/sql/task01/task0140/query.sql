@@ -1,0 +1,28 @@
+-- Sorting the Result (ORDER BY)
+--
+-- Select the ip_from, ip_to, and country_name columns
+-- from the ip2country table in the specified order.
+-- Sort the result by the ip_to column in descending order.
+-- During selection, skip the first 74 rows.
+-- The ORDER BY, DESC, and OFFSET operators must be used.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сортування результату (ORDER BY)
+--
+-- Вибрати з таблиці ip2country стовпчики ip_from, ip_to, country_name
+-- у вказаному порядку.
+-- Результат відсортуй за колонкою ip_to у спадному порядку.
+-- Під час вибору пропусти перші 74 рядки.
+-- Потрібно використовувати: ORDER BY, DESC, OFFSET.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT ip_from, ip_to, country_name FROM ip2country ORDER BY ip_to DESC OFFSET 74;

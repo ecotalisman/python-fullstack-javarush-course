@@ -1,0 +1,43 @@
+-- 3 IFs
+--
+-- Write a query that, according to the data from the employee table
+-- for the city field value 'London', returns the following information:
+-- 'good' if the position field value is 'manager'
+-- and salary is greater than 10000,
+-- 'good' if the position field value is NOT 'manager'
+-- and salary is greater than 5000,
+-- 'bad' if the position field value is 'manager'
+-- and salary is less than or equal to 10000,
+-- 'bad' if the position field value is NOT 'manager'
+-- and salary is less than or equal to 5000.
+-- Use a query of the following form:
+-- SELECT IF(<condition>, IF(...), IF(...)) FROM <table> WHERE ...
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- 3 IF-и
+--
+-- Напиши запит, який згідно з даними з таблиці employee
+-- для міста city 'London' поверне таку інформацію:
+-- 'good', якщо посада position 'manager'
+-- та зарплата salary більше 10000,
+-- 'good', якщо посада position НЕ 'manager'
+-- та зарплата salary більше 5000,
+-- 'bad', якщо посада position 'manager'
+-- і зарплата salary менша або дорівнює 10000,
+-- 'bad', якщо посада position НЕ 'manager'
+-- і зарплата salary менша або дорівнює 5000.
+-- Використовуй запит виду:
+-- SELECT IF(<умова>, IF(...), IF(...)) FROM <таблиця> WHERE ...
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT IF(position = 'manager', IF(salary > 10000, 'good', 'bad'), IF(salary > 5000, 'good', 'bad'))
+FROM employee WHERE city = 'London';

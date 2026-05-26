@@ -1,0 +1,34 @@
+-- Management Should Be Paid More
+--
+-- It is known that the first 4 employees according to id
+-- are the company management, and the task is to check
+-- who earns more than 1000 and who does not.
+-- Select id from the employee table and 'yes'
+-- if salary is strictly greater than 1000,
+-- or 'no' if salary is less than 1000,
+-- where the id field value is strictly less than 5.
+-- Use the IF() operator.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Керівництву потрібно платити більше
+--
+-- Відомо, що перші 4 співробітники згідно з id —
+-- це керівництво компанії, і стоїть завдання перевірити,
+-- хто отримує більше 1000, а хто — ні.
+-- Потрібно вибрати з employee таблиці id і 'yes',
+-- якщо salary строго більше 1000,
+-- або 'no', якщо salary менше 1000,
+-- у яких значення поля id строго менше 5.
+-- Використовуй оператор IF().
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT id, IF(salary > 1000, 'yes', 'no') FROM employee WHERE id < 5;

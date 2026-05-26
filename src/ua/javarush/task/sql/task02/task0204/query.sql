@@ -1,0 +1,25 @@
+-- Greater Than or Equal
+--
+-- Using a database query, compare numbers using the IF function
+-- and the >= sign, and return 'yes' if the first number
+-- is greater than or equal to the second one, and 'no' otherwise.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Або більше, або дорівнює
+--
+-- За допомогою запиту до бази даних порівняти числа,
+-- використовуючи функції IF та знак >=
+-- і повернути 'yes', якщо перше число більше або дорівнює другому,
+-- і 'no' — у протилежному випадку.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT IF(A >= B, 'yes', 'no');

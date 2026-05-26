@@ -1,0 +1,36 @@
+-- 10 Lucky Ones
+--
+-- The company has extra money, so it decided to give bonuses
+-- to 10 employees whose salary is less than 500.
+-- Select all information about the employee from the employee table
+-- and the amount of their bonus:
+-- 1000 if salary is less than or equal to 500,
+-- 0 if salary is greater than 500,
+-- for those whose id field value is strictly greater than 5.
+-- Use the IF() operator and the <= sign to calculate the bonus amount.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- 10 везунчиків
+--
+-- У компанії з'явилися зайві гроші,
+-- отже вирішили преміювати 10 співробітників,
+-- у яких зарплата менша за 500.
+-- Потрібно вибрати з таблиці employee всю інформацію
+-- про співробітника та розмір його премії:
+-- 1000, якщо salary менше або дорівнює 500,
+-- 0, якщо salary більше 500,
+-- для тих, у кого значення поля id строго більше 5.
+-- Використовуй оператор IF() і знак <=
+-- для розрахунку розміру премії.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT *, IF(salary <= 500, 1000, 0) FROM employee WHERE id > 5 LIMIT 10;

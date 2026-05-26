@@ -1,0 +1,25 @@
+-- IF Function, Which Is Greater
+--
+-- Using a database query, compare numbers with the IF function
+-- and the > sign, and return 1 if the first number is greater
+-- than the second one, and 0 otherwise.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Функція IF, хто більше
+--
+-- За допомогою запиту до бази даних порівняти числа
+-- за допомогою функції IF та знаку >
+-- і повернути 1, якщо перше число більше другого,
+-- і 0 — у протилежному випадку.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT IF(A > B, 1, 0);

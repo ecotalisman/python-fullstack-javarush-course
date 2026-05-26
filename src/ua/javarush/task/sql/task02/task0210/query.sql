@@ -1,0 +1,22 @@
+-- NULLIF and Identical Numbers
+--
+-- Write a query that uses NULLIF to compare two identical numbers
+-- and returns the result.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- NULLIF та однакові числа
+--
+-- Напиши запит, який за допомогою NULLIF
+-- порівнює два однакові числа та повертає результат.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT NULLIF(1, 1);

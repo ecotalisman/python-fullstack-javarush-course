@@ -1,0 +1,22 @@
+-- NULLIF
+--
+-- Write a query that uses NULLIF to compare two different numbers
+-- and returns the result.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- NULLIF
+--
+-- Напиши запит, який за допомогою NULLIF
+-- порівнює два різні числа та повертає результат.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT NULLIF(1, 2);

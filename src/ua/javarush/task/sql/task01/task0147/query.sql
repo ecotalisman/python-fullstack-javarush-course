@@ -1,0 +1,26 @@
+-- Actions with NULL
+--
+-- Select the required, identifier, and description columns
+-- from the parts table in the specified order,
+-- where the description field value is NULL
+-- OR the required field value is equal to true.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Дії з NULL
+--
+-- Вибрати з таблиці parts колонки required, identifier, description
+-- у вказаному порядку,
+-- у яких значення поля description дорівнює NULL
+-- АБО значення поля required дорівнює true.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT required, identifier, description FROM parts WHERE description IS NULL OR required = true;

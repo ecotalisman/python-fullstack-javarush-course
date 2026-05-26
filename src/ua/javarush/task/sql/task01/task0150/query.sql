@@ -1,0 +1,26 @@
+-- Actions with NULL
+--
+-- Select all columns from the parts table using *,
+-- where the id field value is between 7 and 23 inclusive
+-- AND the identifier field value is NULL.
+-- Select only the first 2 records.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Дії з NULL
+--
+-- Вибрати всі колонки з таблиці parts, використовуючи *,
+-- які мають значення поля id між 7 і 23 включно
+-- І значення поля identifier дорівнює NULL.
+-- Вибери лише перші 2 записи.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM parts WHERE id BETWEEN 7 AND 23 AND identifier IS NULL LIMIT 2;

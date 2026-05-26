@@ -1,0 +1,22 @@
+-- Actions with NULL
+--
+-- Select all columns from the parts table using *,
+-- where the description field value is NULL.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Дії з NULL
+--
+-- Вибрати всі колонки з таблиці parts, використовуючи *,
+-- у яких значення поля description дорівнює NULL.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM parts WHERE description IS NULL;

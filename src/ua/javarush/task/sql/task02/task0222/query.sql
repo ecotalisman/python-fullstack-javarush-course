@@ -1,0 +1,22 @@
+-- How Many Cars Do We Have?
+--
+-- Write a query that selects information from the cars table
+-- about how many cars of each name are available.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Скільки в нас авто?
+--
+-- Напиши запит, який з таблиці cars вибере інформацію
+-- про те, скільки яких назв name автомобілів є в наявності.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, COUNT(*) FROM cars GROUP BY name;

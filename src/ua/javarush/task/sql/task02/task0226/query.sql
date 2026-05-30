@@ -1,0 +1,24 @@
+-- Cars from 2021
+--
+-- Write a query that selects information from the cars table
+-- about how many cars of each name were produced in 2021,
+-- using the prod_year field.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Авто 2021 року
+--
+-- Напиши запит, який із таблиці cars вибере інформацію
+-- про те, скільки яких автомобілів name
+-- було випущено у 2021 році prod_year.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, COUNT(*) FROM cars WHERE prod_year = 2021 GROUP BY name;

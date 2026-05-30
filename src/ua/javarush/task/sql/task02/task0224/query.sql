@@ -1,0 +1,24 @@
+-- How Many Employees?
+--
+-- Write a query that selects information from the employee table
+-- about how many employees with the position 'backend developer'
+-- there are in each department.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Скільки співробітників?
+--
+-- Напиши запит, який із таблиці employee вибере інформацію
+-- про те, скільки в кожному департаменті department
+-- співробітників зі спеціальністю position 'backend developer'.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT department, COUNT(*) FROM employee WHERE position = 'backend developer' GROUP BY department;

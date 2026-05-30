@@ -1,0 +1,24 @@
+-- How Many Blue Cars Do We Have?
+--
+-- Write a query that selects information from the cars table
+-- about how many blue cars, where name is equal to 'Blue Car',
+-- were produced in each year, prod_year, in which they were produced.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Скільки в нас синіх авто?
+--
+-- Напиши запит, який з таблиці cars вибере інформацію
+-- про те, скільки синіх автомобілів, де name дорівнює 'Blue Car',
+-- випущено кожного року prod_year, в якому вони випускалися.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT prod_year, COUNT(*) FROM cars WHERE name = 'Blue Car' GROUP BY prod_year;

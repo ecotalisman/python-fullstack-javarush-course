@@ -1,0 +1,24 @@
+-- How Many Employees Are There in the Departments?
+--
+-- Write a query that selects information from the employee table
+-- about how many employees there are in each department.
+-- The column with the count in the result must be named number_of_employees.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Скільки співробітників у департаментах?
+--
+-- Напиши запит, який із таблиці employee вибере інформацію
+-- про те, скільки в кожному департаменті department співробітників.
+-- Колонка з кількістю в результаті має мати назву number_of_employees.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT department, COUNT(*) AS number_of_employees FROM employee GROUP BY department;

@@ -1,0 +1,25 @@
+-- Cars and Years 2 2
+--
+-- Write a query that selects the production year, prod_year,
+-- from the cars table and shows the number of cars produced
+-- in each specific year.
+-- The column with the count in the result must be named car_count.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Авто і роки 2 2
+--
+-- Напиши запит, який із таблиці cars вибере рік випуску prod_year
+-- із зазначенням кількості машин, випущених у визначений рік.
+-- Колонка з кількістю в результаті повинна мати назву car_count.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT prod_year, COUNT(*) AS car_count FROM cars GROUP BY prod_year;

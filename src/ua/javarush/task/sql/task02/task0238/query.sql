@@ -1,0 +1,26 @@
+-- Year and Month of Birth
+--
+-- Write a query that, from the employee table,
+-- selects the year and month number of birth for each employee
+-- based on the date_of_birth field.
+-- The year and month must be selected into separate columns.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Рік і місяць народження
+--
+-- Напиши запит, який із таблиці employee
+-- на основі дати народження date_of_birth
+-- вибере рік та місяць, номер, народження кожного працівника.
+-- Рік та місяць потрібно вибрати до різних колонок.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT YEAR(date_of_birth), MONTH(date_of_birth) FROM employee;

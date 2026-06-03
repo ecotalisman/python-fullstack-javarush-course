@@ -1,0 +1,26 @@
+-- Strange Grouping
+--
+-- Write a query that, according to the data from the cars table,
+-- selects the name and prod_year fields.
+-- In the final selection, the information must be grouped
+-- by the name, prod_year, and price columns.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Дивне групування
+--
+-- Напиши запит, який згідно з даними з таблиці cars
+-- вибере поля name та prod_year.
+-- У підсумковій вибірці інформація має бути згрупована
+-- за колонками name, prod_year та price.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, prod_year FROM cars GROUP BY name, prod_year, price;

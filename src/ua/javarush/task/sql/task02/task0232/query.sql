@@ -1,0 +1,23 @@
+-- Oh, Those Part-Time Students
+--
+-- Write a query that shows the number of students
+-- from the part-time department, where is_full_time = 'no',
+-- and full-time students, where is_full_time = 'yes',
+-- from the students table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Ох вже ці заочники
+--
+-- Напиши запит, який покаже кількість студентів
+-- таблиця students заочного відділення is_full_time = 'no'
+-- та стаціонару is_full_time = 'yes'.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+SELECT is_full_time, COUNT(*) FROM students GROUP BY is_full_time;

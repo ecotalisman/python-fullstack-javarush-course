@@ -1,0 +1,24 @@
+-- Distribution of Birthday People by Year of Birth
+--
+-- Write a query that selects information from the employee table
+-- about how many employees were born in each specific year,
+-- using the date_of_birth field.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Розподіл іменинників за роками народження
+--
+-- Напиши запит, який з таблиці employee вибере інформацію
+-- про те, скільки співробітників народилося date_of_birth
+-- у визначеному році.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT YEAR(date_of_birth), COUNT(*) FROM employee GROUP BY YEAR(date_of_birth);

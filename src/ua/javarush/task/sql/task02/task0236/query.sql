@@ -1,0 +1,24 @@
+-- Distribution of Employees by Department and Position
+--
+-- Write a query that selects information from the employee table
+-- about how many employees there are in each specific department
+-- and position.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Розподіл співробітників за департаментом та позицією
+--
+-- Напиши запит, який з таблиці employee вибере інформацію
+-- про те, скільки співробітників у визначеному департаменті department
+-- на певній посаді position.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT department, position, COUNT(*) FROM employee GROUP BY department, position;

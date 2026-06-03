@@ -1,0 +1,29 @@
+-- Less Than 3
+--
+-- Write a query that selects the name and the number of cars
+-- with each specific name from the cars table.
+-- Only cars with a count less than 3 must be included in the selection.
+-- Use the alias car_count for the count,
+-- and use this alias to check the condition.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Менше 3
+--
+-- Напиши запит, який з таблиці cars вибере назву name
+-- та кількість автомобілів із певною назвою.
+-- До вибірки повинні потрапити лише автомобілі
+-- з кількістю менше 3.
+-- Для кількості використовуй аліас car_count,
+-- і цей аліас використовуй для перевірки умови.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, COUNT(*) AS car_count FROM cars GROUP BY name HAVING car_count < 3;

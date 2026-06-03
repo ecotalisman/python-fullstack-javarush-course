@@ -1,0 +1,25 @@
+-- More Than One
+--
+-- Write a query that selects the name and the number of cars
+-- with each specific name from the cars table.
+-- Only cars with a count greater than 1 must be included in the selection.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Більше одного
+--
+-- Напиши запит, який з таблиці cars вибере назву name
+-- та кількість автомобілів із певною назвою.
+-- До вибірки мають потрапити лише автомобілі
+-- з кількістю більше 1.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, COUNT(*) AS count_all FROM cars GROUP BY name HAVING count_all > 1;

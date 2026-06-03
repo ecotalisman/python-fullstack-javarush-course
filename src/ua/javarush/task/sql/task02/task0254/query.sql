@@ -1,0 +1,23 @@
+-- Minimum and Maximum Cost
+--
+-- Write a query that selects the name,
+-- the minimum cost, and the maximum cost from the cars table,
+-- based on the price field.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Мінімальна і максимальна вартість
+--
+-- Напиши запит, який з таблиці автомобілів cars
+-- вибере назву name, мінімальну та максимальну вартість price.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, MIN(price), MAX(price) FROM cars GROUP BY name;

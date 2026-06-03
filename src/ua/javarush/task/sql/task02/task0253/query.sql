@@ -1,0 +1,26 @@
+-- Cost of Some Cars
+--
+-- Write a query that selects the name and the sum of price
+-- from the cars table.
+-- Only cars whose total cost is greater than 200,000
+-- must be included in the result.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Вартість деяких авто
+--
+-- Напиши запит, який з таблиці автомобілів cars
+-- вибере назву name та суму price.
+-- До результату мають потрапити лише ті авто,
+-- сума вартості яких понад 200 000.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, SUM(price) AS sum_price FROM cars GROUP BY name HAVING sum_price > 200000;

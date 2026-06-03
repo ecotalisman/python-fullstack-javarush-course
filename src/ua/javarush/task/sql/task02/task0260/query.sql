@@ -1,0 +1,37 @@
+-- Rating Matters
+--
+-- Write a query that selects the following from the employee table:
+-- the rating value,
+-- and also a string with a comma-separated list of employee names
+-- with this rating.
+-- The names must be combined using the aggregate function
+-- GROUP_CONCAT(name).
+-- Group the result by rating
+-- and leave only those groups where the rating is strictly greater than 2.
+-- Output the result in ascending order of rating.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Рейтинг має значення
+--
+-- Напиши запит, який з таблиці employee вибере:
+-- значення рейтингу rating,
+-- а також рядок зі списком імен name співробітників
+-- з цим рейтингом, об'єднаних через кому.
+-- Імена мають бути об’єднані за допомогою
+-- агрегатної функції GROUP_CONCAT(name).
+-- Результат згрупуй за рейтингом
+-- та залиш тільки ті групи,
+-- де рейтинг строго більший за 2.
+-- Виведи результат у порядку зростання рейтингу.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT rating, GROUP_CONCAT(name) FROM employee GROUP BY rating HAVING rating > 2 ORDER BY rating;

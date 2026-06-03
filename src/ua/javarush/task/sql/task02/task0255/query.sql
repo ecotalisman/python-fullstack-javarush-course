@@ -1,0 +1,27 @@
+-- Minimum and Limited Maximum Cost
+--
+-- Write a query that selects the name,
+-- the minimum cost, and the maximum cost from the cars table,
+-- based on the price field.
+-- Only cars whose maximum cost is less than 200000
+-- must be included in the result.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Мінімальна і обмежена максимальна вартість
+--
+-- Напиши запит, який з таблиці автомобілів cars
+-- вибере назву name, мінімальну та максимальну вартість price.
+-- До результату повинні потрапити лише ті авто,
+-- максимальна вартість яких менша за 200000.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, MIN(price), MAX(price) FROM cars GROUP BY name HAVING MAX(price) < 200000;

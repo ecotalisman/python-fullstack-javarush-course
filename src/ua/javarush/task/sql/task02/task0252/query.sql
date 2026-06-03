@@ -1,0 +1,22 @@
+-- Cost of All Cars
+--
+-- Write a query that selects the name and the sum of price
+-- from the cars table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Вартість всіх авто
+--
+-- Напиши запит, який з таблиці cars
+-- вибере назву name та суму price.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, SUM(price) FROM cars GROUP BY name;

@@ -1,0 +1,30 @@
+-- Developers by Position
+--
+-- Write a query that selects the positions
+-- and the list of employee names for each position
+-- from the employee table.
+-- Only positions with the word "developer" in their name
+-- must be included in the selection.
+-- Use GROUP_CONCAT and HAVING.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Девелопери за позиціями
+--
+-- Напиши запит, який з таблиці employee
+-- вибере позиції position
+-- та список імен name співробітників на кожній позиції.
+-- До вибірки повинні потрапити лише позиції
+-- зі словом "developer" у назві.
+-- Використовуй GROUP_CONCAT та HAVING.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT position, GROUP_CONCAT(name) FROM employee GROUP BY position HAVING position LIKE '%developer%';

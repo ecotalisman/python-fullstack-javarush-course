@@ -1,0 +1,26 @@
+-- Employees by Position
+--
+-- Write a query that selects the positions
+-- and the list of employee names for each position
+-- from the employee table.
+-- Use GROUP_CONCAT.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Співробітники за позиціями
+--
+-- Напиши запит, який з таблиці employee
+-- вибере позиції position
+-- та список імен name співробітників на кожній позиції.
+-- Використовуй GROUP_CONCAT.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT position, GROUP_CONCAT(name) FROM employee GROUP BY position;

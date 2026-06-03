@@ -1,0 +1,27 @@
+-- Sum and Average
+--
+-- Write a query that selects the name,
+-- the average cost, and the total cost from the cars table,
+-- based on the price field.
+-- Only cars whose average cost is greater than 100,000
+-- must be included in the result.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сума та середнє
+--
+-- Напиши запит, який з таблиці автомобілів cars
+-- вибере назву name, середню та сумарну вартість price.
+-- До результату мають потрапити лише ті авто,
+-- середня вартість яких понад 100 000.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, AVG(price), SUM(price) FROM cars GROUP BY name HAVING AVG(price) > 100000;

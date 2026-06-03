@@ -1,0 +1,24 @@
+-- Different Columns, Different Tables
+--
+-- Find the name and location columns from the gyms table,
+-- and the sex and location columns from the customers table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Різні колонки, різні таблиці
+--
+-- Потрібно знайти колонки name і location
+-- з таблиці gyms,
+-- і колонки sex та location
+-- з таблиці customers.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT gyms.name, gyms.location, customers.sex, customers.location FROM gyms, customers;

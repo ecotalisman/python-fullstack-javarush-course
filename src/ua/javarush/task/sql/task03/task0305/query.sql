@@ -1,0 +1,30 @@
+-- Working with Table Aliases
+--
+-- Find the id and name columns from the gyms table,
+-- and the name and email columns from the customers table,
+-- while replacing the table name gyms with 'g'
+-- and the table name customers with 'c'.
+-- Use AS for the temporary replacement of names.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Робота з аліасами таблиць
+--
+-- Потрібно знайти колонки id та name
+-- з таблиці gyms,
+-- та колонки name та email
+-- з таблиці customers,
+-- але водночас замінивши назву таблиці gyms на 'g',
+-- а назву таблиці customers на 'c'.
+-- Використовуй AS для тимчасової заміни назв.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT g.id, g.name, c.name, c.email FROM gyms AS g, customers AS c;

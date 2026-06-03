@@ -1,0 +1,22 @@
+-- Find in Different Tables
+--
+-- Select all columns using *
+-- from the gyms and customers tables.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Знайти в різних таблицях
+--
+-- Вибрати всі колонки, використовуй *,
+-- з таблиць gyms та customers.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM gyms, customers;

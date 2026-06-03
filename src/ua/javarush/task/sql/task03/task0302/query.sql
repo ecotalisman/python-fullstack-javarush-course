@@ -1,0 +1,24 @@
+-- I Dreamed of London's Sky
+--
+-- Find all records from the gyms and customers tables
+-- where location is equal to London.
+-- Use WHERE.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Мені наснилося небо Лондона
+--
+-- Потрібно знайти всі записи з таблиць gyms і customers,
+-- де location дорівнює London.
+-- Використовуй WHERE.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM gyms, customers WHERE gyms.location = 'London' AND customers.location = 'London';

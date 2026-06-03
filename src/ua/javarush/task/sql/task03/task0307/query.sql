@@ -1,0 +1,33 @@
+-- Filtering by ID
+--
+-- Find the id and name columns from the gyms table,
+-- and the id column from the customers table,
+-- while replacing the table name gyms with 'gym'
+-- and the table name customers with 'cust'.
+-- Also, we do not need all ids from the cust table,
+-- only those that are less than 50.
+-- Use AS and WHERE.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Фільтруємо за id
+--
+-- Потрібно знайти колонки id та name
+-- з таблиці gyms,
+-- та колонку id з таблиці customers,
+-- водночас замінивши назву таблиці gyms на 'gym',
+-- а назву таблиці customers на 'cust'.
+-- Також нам не потрібні всі id з таблиці cust,
+-- а лише ті, що менше 50.
+-- Використовуй AS та WHERE.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT gym.id, gym.name, cust.id FROM gyms AS gym, customers AS cust WHERE cust.id < 50;

@@ -1,0 +1,26 @@
+-- When the Name and Title Are Equal
+--
+-- Find all records from the gyms and customers tables
+-- where the name from the gyms table
+-- is equal to the name from the customers table.
+-- Use WHERE.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Коли ім'я та назва рівні
+--
+-- Потрібно знайти всі записи з таблиць gyms і customers,
+-- де name з таблиці gyms
+-- дорівнює name з таблиці customers.
+-- Використовуй WHERE.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM gyms, customers WHERE gyms.name = customers.name;

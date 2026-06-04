@@ -1,0 +1,45 @@
+-- LEFT JOIN and Column Aliases
+--
+-- In this task, you need to:
+-- 1. Select the zip_code column from the customers table,
+-- renaming it to cust_zip_code,
+-- and the order_status column from the orders table,
+-- renaming it to status.
+-- 2. Join the customers and orders tables
+-- using the LEFT JOIN operator.
+-- 3. Using the ON operator, add a condition
+-- that the customer_id column from the customers table
+-- is equal to the customer_id column from the orders table.
+-- Use the LEFT JOIN, ON, and AS operators.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- LEFT JOIN та аліаси колонок
+--
+-- У цьому завданні тобі буде потрібно:
+-- 1. Вибрати колонку zip_code
+-- з таблиці customers,
+-- перейменувавши її на cust_zip_code,
+-- і колонку order_status
+-- з таблиці orders,
+-- перейменувавши її на status.
+-- 2. Об'єднати таблиці customers та orders
+-- оператором LEFT JOIN.
+-- 3. Використовуючи оператор ON,
+-- додати умову, що колонка customer_id
+-- таблиці customers
+-- дорівнює колонці customer_id таблиці orders.
+-- Використовуй оператори LEFT JOIN, ON та AS.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT customers.zip_code AS cust_zip_code, orders.order_status AS status
+FROM customers
+         LEFT JOIN orders ON customers.customer_id = orders.customer_id;

@@ -1,0 +1,55 @@
+-- RIGHT JOIN, Aliases, and WHERE
+--
+-- In this task, you need to:
+-- 1. Select the last_name column from the authors table,
+-- renaming it to author,
+-- and the title and copies_sold_millions columns
+-- from the books table,
+-- renaming them to book_title and books_sold respectively.
+-- 2. Join the authors and books tables
+-- using the RIGHT JOIN operator,
+-- renaming them to a and b respectively.
+-- 3. Using the ON operator, add a condition
+-- that the author_id column from the authors table
+-- is equal to the author_id column from the books table.
+-- 4. Using the WHERE operator, add a condition
+-- that copies_sold_millions from the books table
+-- must be greater than 50.
+-- Use the RIGHT JOIN, AS, ON, and WHERE operators.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- RIGHT JOIN, аліаси і WHERE
+--
+-- У цьому завданні тобі буде потрібно:
+-- 1. Вибрати колонку last_name
+-- з таблиці authors,
+-- перейменувавши її на author,
+-- і колонки title та copies_sold_millions
+-- з таблиці books,
+-- перейменувавши на book_title і books_sold відповідно.
+-- 2. Об'єднати таблиці authors і books
+-- оператором RIGHT JOIN,
+-- перейменувавши на a і b відповідно.
+-- 3. Використовуючи оператор ON,
+-- додати умову, що колонка author_id
+-- таблиці authors
+-- дорівнює колонці author_id таблиці books.
+-- 4. Використовуючи оператор WHERE,
+-- додати умову, що copies_sold_millions
+-- таблиці books має бути більше 50.
+-- Використовуй оператори RIGHT JOIN, AS, ON та WHERE.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT a.last_name AS author, b.title, b.copies_sold_millions
+FROM authors AS a
+         RIGHT JOIN books AS b ON a.author_id = b.author_id
+WHERE b.copies_sold_millions > 50;

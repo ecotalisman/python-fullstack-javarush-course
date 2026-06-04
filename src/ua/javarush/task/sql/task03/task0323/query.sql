@@ -1,0 +1,42 @@
+-- Starting Work with LEFT JOIN
+--
+-- In this task, you need to:
+-- 1. Select the last_name column from the customers table,
+-- temporarily changing its name to surname using AS,
+-- and select the order_id column from the orders table.
+-- 2. Join the customers and orders tables
+-- using the LEFT JOIN operator.
+-- 3. Using the ON operator, add a condition
+-- that the customer_id column from the customers table
+-- is equal to the customer_id column from the orders table.
+-- Use the LEFT JOIN, AS, and ON operators.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Починаємо працювати з LEFT JOIN
+--
+-- У цьому завданні тобі буде потрібно:
+-- 1. Вибрати колонку last_name
+-- з таблиці customers,
+-- тимчасово змінивши назву на surname,
+-- використовуй AS,
+-- та колонку order_id з таблиці orders.
+-- 2. Об'єднати таблиці customers та orders
+-- оператором LEFT JOIN.
+-- 3. За допомогою оператора ON додати умову,
+-- що колонка customer_id таблиці customers
+-- дорівнює колонці customer_id таблиці orders.
+-- Використовуй оператори LEFT JOIN, AS та ON.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT customers.last_name AS surname, orders.order_id
+FROM customers
+         LEFT JOIN orders ON customers.customer_id = orders.customer_id;

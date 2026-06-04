@@ -1,0 +1,60 @@
+-- RIGHT JOIN, Aliases, WHERE, and GROUP BY
+--
+-- In this task, you need to:
+-- 1. Select the last_name column from the authors table,
+-- renaming it to author,
+-- and the genre and date_released columns from the books table,
+-- renaming genre to book_genre.
+-- 2. Join the authors and books tables
+-- using the RIGHT JOIN operator,
+-- renaming them to auth and book respectively.
+-- 3. Using the ON operator, add a condition
+-- that the author_id column from the authors table
+-- is equal to the author_id column from the books table.
+-- 4. Using the WHERE operator, add a condition
+-- that date_released from the books table
+-- must be less than 1900.
+-- 5. Using the GROUP BY operator,
+-- group the result by the genre and date_released columns
+-- from the books table.
+-- Use the RIGHT JOIN, AS, ON, WHERE, and GROUP BY operators.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- RIGHT JOIN, аліаси, WHERE і GROUP BY
+--
+-- У цьому завданні тобі буде потрібно:
+-- 1. Вибрати колонку last_name
+-- з таблиці authors,
+-- перейменувавши її на author,
+-- і колонки genre та date_released
+-- з таблиці books,
+-- перейменувавши genre на book_genre.
+-- 2. Об'єднати таблиці authors і books
+-- оператором RIGHT JOIN,
+-- перейменувавши на auth і book відповідно.
+-- 3. Використовуючи оператор ON,
+-- додати умову, що колонка author_id
+-- таблиці authors
+-- дорівнює колонці author_id таблиці books.
+-- 4. Використовуючи оператор WHERE,
+-- додати умову, що date_released
+-- таблиці books має бути менше 1900.
+-- 5. Використовуючи оператор GROUP BY,
+-- згрупуй результат за колонками genre та date_released
+-- таблиці books.
+-- Використовуй оператори RIGHT JOIN, AS, ON, WHERE та GROUP BY.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT auth.last_name AS author, book.genre, book.date_released
+FROM authors AS auth
+         RIGHT JOIN books AS book ON auth.author_id = book.author_id
+WHERE book.date_released < 1900 GROUP BY book.genre, book.date_released;

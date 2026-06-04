@@ -1,0 +1,57 @@
+-- Continue Working with RIGHT JOIN and WHERE
+--
+-- In this task, you need to:
+-- 1. Select the phone column from the customers table
+-- and rename it to cust_phone using the AS operator.
+-- Also select the order_date, total_cost, and store_id columns
+-- from the orders table.
+-- 2. Join the customers and orders tables
+-- using the RIGHT JOIN operator.
+-- 3. Using the ON operator, add a condition
+-- that the customer_id column from the customers table
+-- is equal to the customer_id column from the orders table.
+-- 4. Using the WHERE and AND operators, add a condition
+-- that the city column from the customers table
+-- must be equal to 'Dallas',
+-- and the order_status column from the orders table
+-- must be equal to 'PROCESSING'.
+-- Use the AS, RIGHT JOIN, ON, WHERE, and AND operators.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Продовжуємо роботу з RIGHT JOIN і WHERE
+--
+-- У цьому завданні тобі буде потрібно:
+-- 1. Вибрати колонку phone
+-- з таблиці customers
+-- та перейменувати її на cust_phone,
+-- використовуй оператор AS.
+-- Також треба вибрати колонки order_date,
+-- total_cost та store_id
+-- з таблиці orders.
+-- 2. Об'єднати таблиці customers та orders
+-- оператором RIGHT JOIN.
+-- 3. Використовуючи оператор ON,
+-- додати умову, що колонка customer_id
+-- таблиці customers
+-- дорівнює колонці customer_id таблиці orders.
+-- 4. Використовуючи оператори WHERE і AND,
+-- додати умову, що колонка city
+-- таблиці customers повинна дорівнювати 'Dallas',
+-- а колонка order_status таблиці orders
+-- повинна дорівнювати 'PROCESSING'.
+-- Використовуй оператори AS, RIGHT JOIN, ON, WHERE та AND.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT customers.phone AS cust_phone, orders.order_date, orders.total_cost, orders.store_id
+FROM customers
+         RIGHT JOIN orders ON customers.customer_id = orders.customer_id
+WHERE customers.city = 'Dallas' AND orders.order_status = 'PROCESSING';

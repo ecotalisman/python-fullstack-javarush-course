@@ -1,0 +1,44 @@
+-- JOIN and Table Aliases
+--
+-- In this task, you need to:
+-- 1. Select the customer_id column from the customers table
+-- and the order_status column from the orders table.
+-- 2. Join the customers and orders tables
+-- using the JOIN operator,
+-- while changing their names to c and o respectively
+-- using the AS operator.
+-- 3. Using the ON operator, add a condition
+-- that the customer_id column from the customers table
+-- is equal to the customer_id column from the orders table.
+-- Use the JOIN, ON, and AS operators.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- JOIN та аліаси таблиць
+--
+-- У цьому завданні тобі буде потрібно:
+-- 1. Вибрати стовпчик customer_id
+-- з таблиці customers
+-- і стовпчик order_status з таблиці orders.
+-- 2. Об'єднати таблиці customers і orders
+-- оператором JOIN,
+-- змінивши їх назви на c і o відповідно,
+-- використовуючи оператор AS.
+-- 3. Використовуючи оператор ON,
+-- додати умову, що колонка customer_id
+-- таблиці customers
+-- дорівнює колонці customer_id таблиці orders.
+-- Використовуй оператори JOIN, ON та AS.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT c.customer_id, o.order_status
+FROM customers AS c
+         JOIN orders AS o ON c.customer_id = o.customer_id;

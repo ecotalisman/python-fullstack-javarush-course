@@ -1,0 +1,55 @@
+-- Working with JOIN, ON, AS, WHERE, and OR
+--
+-- In this task, you need to:
+-- 1. Select the customer_id and email columns
+-- from the customers table,
+-- and the order_id and order_status columns
+-- from the orders table.
+-- 2. Join the customers and orders tables
+-- using the JOIN operator,
+-- while temporarily replacing the table name customers with c
+-- and the table name orders with o using the AS operator.
+-- 3. Using the ON operator, add a condition
+-- that the customer_id column from the customers table
+-- is equal to the customer_id column from the orders table.
+-- 4. Using the WHERE operator, add a condition
+-- that order_status from the orders table
+-- must be equal to 'PAID' or, using OR, 'PROCESSING'.
+-- Use the JOIN, ON, AS, WHERE, and OR operators.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Працюємо з JOIN, ON, AS, WHERE і OR
+--
+-- У цьому завданні тобі буде потрібно:
+-- 1. Вибрати колонки customer_id та email
+-- з таблиці customers,
+-- та колонки order_id та order_status
+-- з таблиці orders.
+-- 2. Об'єднати таблиці customers та orders
+-- оператором JOIN,
+-- але водночас через оператор AS
+-- тимчасово замінити назву таблиці customers на c,
+-- а таблиці orders — на o.
+-- 3. За допомогою оператора ON додати умову,
+-- що колонка customer_id таблиці customers
+-- дорівнює колонці customer_id таблиці orders.
+-- 4. За допомогою оператора WHERE додати умову,
+-- що order_status таблиці orders
+-- має дорівнювати 'PAID'
+-- або, використовуй OR, 'PROCESSING'.
+-- Використовуй оператори JOIN, ON, AS, WHERE та OR.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT c.customer_id, c.email, o.order_id, o.order_status
+FROM customers AS c
+         JOIN orders AS o ON c.customer_id = o.customer_id
+WHERE o.order_status = 'PAID' OR o.order_status = 'PROCESSING';

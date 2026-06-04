@@ -1,0 +1,42 @@
+-- Working with JOIN, AS, and ON
+--
+-- In this task, you need to:
+-- 1. Select the ret_name and ret_location columns
+-- from the top_retailers table,
+-- and the sup_name and sup_country columns
+-- from the suppliers table.
+-- 2. Join the tables using the JOIN operator,
+-- while giving them temporary names r and s
+-- for top_retailers and suppliers respectively.
+-- 3. Add a condition that ret_location
+-- is equal to sup_country.
+-- Use the JOIN, AS, and ON operators.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Працюємо з JOIN, AS і ON
+--
+-- У цьому завданні тобі буде потрібно:
+-- 1. Вибрати колонки ret_name і ret_location
+-- з таблиці top_retailers,
+-- колонки sup_name і sup_country
+-- з таблиці suppliers.
+-- 2. Об'єднати таблиці оператором JOIN,
+-- надавши їм тимчасові назви r і s
+-- для top_retailers і suppliers відповідно.
+-- 3. Додати умову, що ret_location
+-- дорівнює sup_country.
+-- Використовуй оператори JOIN, AS та ON.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT r.ret_name, r.ret_location, s.sup_name, s.sup_country
+FROM top_retailers AS r
+         JOIN suppliers AS s ON r.ret_location = s.sup_country;

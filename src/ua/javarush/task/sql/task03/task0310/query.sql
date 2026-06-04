@@ -1,0 +1,27 @@
+-- Changing Column Names
+--
+-- Select the location columns from the gyms and customers tables,
+-- but rename them from location to city for the gyms table,
+-- and from location to address for the customers table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Змінюємо назви колонок
+--
+-- Потрібно вибрати колонки location
+-- з таблиць gyms і customers,
+-- але замінити у їх назви з location на city
+-- для таблиці gyms,
+-- і з location на address
+-- для таблиці customers.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT gyms.location AS city, customers.location AS address FROM gyms, customers;

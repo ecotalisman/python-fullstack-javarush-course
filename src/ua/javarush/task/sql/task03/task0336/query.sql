@@ -1,0 +1,31 @@
+-- Working with a Subquery
+--
+-- In this task, you need to:
+-- 1. Select the year_born column from the authors table.
+-- 2. Using the WHERE operator, add a condition
+-- that year_born from the authors table
+-- must be less than or equal to
+-- the maximum value of date_released from the books table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Робота з підзапитом
+--
+-- У цьому завданні тобі буде потрібно:
+-- 1. Вибрати стовпчик year_born
+-- з таблиці authors.
+-- 2. Використовуючи оператор WHERE,
+-- додати умову, що year_born таблиці authors
+-- має бути менше або дорівнювати
+-- максимальному значенню date_released з таблиці books.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT authors.year_born FROM authors WHERE authors.year_born <= (SELECT MAX(books.date_released) FROM books);

@@ -1,0 +1,30 @@
+-- Events in the Last 20 Days
+--
+-- Write a query that selects all fields
+-- of events from the event table
+-- that happened during the last 20 days.
+-- The date and time of events are stored
+-- in the date_time field.
+-- Use DATEDIFF() and CURDATE().
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Події за останні 20 днів
+--
+-- Напиши запит, який з таблиці event
+-- вибере всі поля подій,
+-- які сталися протягом останніх 20 днів.
+-- Дата та час подій зберігаються
+-- у полі date_time.
+-- Використовуй DATEDIFF() та CURDATE().
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM event WHERE DATEDIFF(CURDATE(), event.date_time) < 20;

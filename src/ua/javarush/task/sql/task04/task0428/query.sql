@@ -1,0 +1,30 @@
+-- Events in the Current Month
+--
+-- Write a query that selects all fields
+-- of events from the event table
+-- that happened during the current month.
+-- The date and time of events are stored
+-- in the date_time field.
+-- Use YEAR(), MONTH(), and CURDATE().
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Події за поточний місяць
+--
+-- Напиши запит, який з таблиці event
+-- вибере всі поля подій,
+-- що відбулися протягом поточного місяця.
+-- Дата та час подій зберігаються
+-- у полі date_time.
+-- Використовуй YEAR(), MONTH() та CURDATE().
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM event WHERE YEAR(event.date_time) = YEAR(CURDATE()) AND MONTH(event.date_time) = MONTH(CURDATE());

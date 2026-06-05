@@ -1,0 +1,30 @@
+-- Events in the Last 2 Weeks
+--
+-- Write a query that selects all fields
+-- of events from the event table
+-- that happened during the last two weeks.
+-- The date and time of events are stored
+-- in the date_time field.
+-- Use BETWEEN, DATE_SUB(), and CURDATE().
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Події за останні 2 тижні
+--
+-- Напиши запит, який з таблиці event
+-- вибере всі поля подій,
+-- що сталися протягом останніх двох тижнів.
+-- Дата та час подій зберігаються
+-- у полі date_time.
+-- Використовуй BETWEEN, DATE_SUB() та CURDATE().
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT * FROM event WHERE event.date_time BETWEEN DATE_SUB(CURDATE(), INTERVAL 2 WEEK) AND CURDATE();

@@ -1,0 +1,28 @@
+-- Truncating a Number
+--
+-- Write a query that selects the value of the a field
+-- truncated to 1 digit after the decimal point,
+-- and the value of the b field
+-- truncated to 2 digits after the decimal point
+-- from the math table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Обрізання числа
+--
+-- Напиши запит, який з таблиці math
+-- вибере значення поля a,
+-- обрізаного до 1 знака після коми,
+-- значення поля b,
+-- обрізаного до 2 знаків після коми.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT TRUNCATE(a, 1), TRUNCATE(b, 2) FROM math;

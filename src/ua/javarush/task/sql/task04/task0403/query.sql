@@ -1,0 +1,23 @@
+-- Remainder of Division
+--
+-- Write a query that selects the remainder
+-- from dividing the a field by the b field
+-- from the math table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Остача від ділення
+--
+-- Напиши запит, який з таблиці math
+-- вибере залишок від поділу поля a на поле b.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT a % b FROM math;

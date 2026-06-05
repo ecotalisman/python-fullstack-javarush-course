@@ -1,0 +1,24 @@
+-- Number of Bits
+--
+-- Write a query that selects the value of the a field
+-- and the number of bits equal to 1
+-- from the logic table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Кількість біт
+--
+-- Напиши запит, який з таблиці logic
+-- вибере значення поля a
+-- і кількість біт, рівних 1.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT a, BIT_COUNT(a) FROM logic;

@@ -1,0 +1,23 @@
+-- Bitwise AND
+--
+-- Write a query that selects the bitwise AND
+-- of the a and b fields
+-- from the logic table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Побітовий AND
+--
+-- Напиши запит, який із таблиці logic
+-- вибере побітовий AND полів a та b.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT a & b FROM logic;

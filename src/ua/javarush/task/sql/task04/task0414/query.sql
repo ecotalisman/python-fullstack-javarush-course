@@ -1,0 +1,24 @@
+-- Rounding to the Nearest Integer
+--
+-- Write a query that selects the values
+-- of the a and b fields rounded to the nearest integer
+-- from the math table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Округлення до найближчого цілого
+--
+-- Напиши запит, який з таблиці math
+-- вибере значення полів a та b,
+-- округлених до найближчого цілого.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT ROUND(a), ROUND(b) FROM math;

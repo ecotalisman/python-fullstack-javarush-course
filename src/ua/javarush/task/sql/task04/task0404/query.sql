@@ -1,0 +1,23 @@
+-- Integer Division
+--
+-- Write a query that selects the result
+-- of integer division of the a field by the b field
+-- from the math table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Ділення націло
+--
+-- Напиши запит, який із таблиці math
+-- вибере результат поділу націло поля a на поле b.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT a DIV b FROM math;

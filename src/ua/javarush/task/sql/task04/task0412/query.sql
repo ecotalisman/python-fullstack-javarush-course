@@ -1,0 +1,26 @@
+-- Rounding Up
+--
+-- Write a query that selects the values
+-- of the a and b fields rounded up
+-- from the math table.
+-- Use both variants of the function.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Округлення вгору
+--
+-- Напиши запит, який з таблиці math
+-- вибере значення полів a і b,
+-- округлених вгору.
+-- Використовуй обидва варіанти функції.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT CEIL(a), CEILING(b) FROM math;

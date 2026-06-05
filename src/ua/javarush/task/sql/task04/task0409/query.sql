@@ -1,0 +1,23 @@
+-- Bitwise Right Shift
+--
+-- Write a query that selects the bitwise right shift
+-- of the a field by b
+-- from the logic table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Бітовий зсув вправо
+--
+-- Напиши запит, який із таблиці logic
+-- вибере бітовий зсув поля a вправо на b.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT a >> b FROM logic;

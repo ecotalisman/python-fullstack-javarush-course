@@ -1,0 +1,30 @@
+-- Random Real Numbers
+--
+-- Write a query that selects from the math table:
+-- a random real number in the range from 0 to 1,
+-- a random real number in the range from 0 to 1
+-- using the value 1 as the seed,
+-- and a random real number in the range from 0 to 1
+-- using the value of the a field as the seed.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Випадкові дійсні числа
+--
+-- Напиши запит, який з таблиці math вибере
+-- випадкове дійсне число в діапазоні від 0 до 1,
+-- випадкове дійсне число в діапазоні від 0 до 1,
+-- використовуючи як seed значення 1,
+-- і випадкове дійсне число в діапазоні від 0 до 1,
+-- використовуючи як seed значення поля a.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT RAND(), RAND(1), RAND(a) FROM math;

@@ -1,0 +1,23 @@
+-- Subtraction and Addition
+--
+-- Write a query that selects the difference
+-- and the sum of the a and b fields
+-- from the math table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Віднімання і додавання
+--
+-- Напиши запит, який з таблиці math
+-- вибере різницю та суму полів a та b.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT a - b , a + b FROM math;

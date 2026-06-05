@@ -1,0 +1,24 @@
+-- Rounding Down
+--
+-- Write a query that selects the values
+-- of the a and b fields rounded down
+-- from the math table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Округлення вниз
+--
+-- Напиши запит, який з таблиці math
+-- вибере значення полів a і b,
+-- округлених вниз.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT FLOOR(a), FLOOR(b) FROM math;

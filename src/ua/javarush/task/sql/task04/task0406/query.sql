@@ -1,0 +1,23 @@
+-- Bitwise OR
+--
+-- Write a query that selects the bitwise OR
+-- of the a and b fields
+-- from the logic table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Бітовий OR
+--
+-- Напиши запит, який з таблиці logic
+-- вибере побітовий OR полів a та b.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT a | b FROM logic;

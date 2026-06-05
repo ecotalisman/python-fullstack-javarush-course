@@ -1,0 +1,22 @@
+-- Year, Month, Day, and Day of Month
+--
+-- Write a query that returns the year, month, day,
+-- and day of the month of the current date.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Рік, місяць, день і день місяця
+--
+-- Напиши запит, який поверне рік, місяць, день
+-- та день місяця поточної дати.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT YEAR(NOW()), MONTH(NOW()), DAY(NOW()), DAYOFMONTH(NOW());

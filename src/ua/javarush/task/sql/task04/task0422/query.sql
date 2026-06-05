@@ -1,0 +1,26 @@
+-- Time Interval Addition
+--
+-- Write a query that returns the current date with time,
+-- as well as the date and time
+-- with null seconds and 33 seconds added.
+-- Use the time addition function.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Додавання і віднімання інтервалу часу
+--
+-- Напиши запит, який поверне поточну дату з часом,
+-- а також дату та час із додаванням null секунд
+-- та 33 секунди.
+-- Використовуй функцію додавання часу.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT NOW(), ADDTIME(NOW(), NULL), ADDTIME(NOW(), 33);

@@ -1,0 +1,24 @@
+-- Current Date and Time 2
+--
+-- Write a query that returns
+-- the current date and time twice.
+-- Use two different functions.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Поточна дата і час 2
+--
+-- Напиши запит, який поверне
+-- поточну дату та час двічі.
+-- Використовуй дві різні функції.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT NOW(), LOCALTIME();

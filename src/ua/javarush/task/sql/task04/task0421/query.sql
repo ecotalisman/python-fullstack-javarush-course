@@ -1,0 +1,28 @@
+-- Date Interval Addition and Subtraction
+--
+-- Write a query that returns the current date without time,
+-- as well as the date and time 3 days from now
+-- and 3 days ago.
+-- Use date addition and subtraction functions
+-- and INTERVAL.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Додавання і віднімання інтервалу дат
+--
+-- Напиши запит, який поверне поточну дату без часу,
+-- а також дату та час через 3 дні
+-- та 3 дні тому назад.
+-- Використовуй функції додавання та віднімання
+-- для дат та INTERVAL.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT CURDATE(), ADDDATE(NOW(),INTERVAL 3 DAY), SUBDATE(NOW(), INTERVAL 3 DAY);

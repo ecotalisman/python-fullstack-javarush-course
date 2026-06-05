@@ -1,0 +1,22 @@
+-- Current Date and Time
+--
+-- Write a query that returns
+-- the current date and the current time.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Поточна дата і час
+--
+-- Напиши запит, який поверне
+-- поточну дату та поточний час.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT CURDATE(), CURTIME();

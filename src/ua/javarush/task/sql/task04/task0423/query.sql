@@ -1,0 +1,26 @@
+-- Born on Monday
+--
+-- Write a query that selects the name and position
+-- of employees who were born on Monday
+-- from the employee table.
+-- Use DAYNAME().
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Народжені в понеділок
+--
+-- Напиши запит, який із таблиці employee
+-- вибере ім'я name та позицію position
+-- співробітників, які народилися в понеділок.
+-- Використовуй DAYNAME().
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, position FROM employee WHERE DAYNAME(date_of_birth) = 'Monday';

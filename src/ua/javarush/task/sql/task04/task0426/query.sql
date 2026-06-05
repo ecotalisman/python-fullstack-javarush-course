@@ -1,0 +1,26 @@
+-- Count by Days
+--
+-- Write a query that selects the year, month, and day
+-- from the date field of the data table,
+-- and the total sum of values from the total field
+-- that belong to this year, month, and day.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Кількість у днях
+--
+-- Напиши запит, який з таблиці data
+-- вибере рік, місяць, день із поля date
+-- та загальну суму значень із поля total,
+-- які належать до цього року, місяця та дня.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT YEAR(date), MONTH(date), DAY(date), SUM(total) FROM data GROUP BY YEAR(date), MONTH(date), DAY(date);

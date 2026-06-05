@@ -1,0 +1,22 @@
+-- Hours, Minutes, and Seconds
+--
+-- Write a query that returns
+-- the hours, minute, and second of the current time.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Години, хвилини і секунди
+--
+-- Напиши запит, який поверне
+-- години, хвилину та секунду поточного часу.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT HOUR(NOW()), MINUTE(NOW()), SECOND(NOW());

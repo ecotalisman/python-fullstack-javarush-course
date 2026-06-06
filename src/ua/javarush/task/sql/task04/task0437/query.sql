@@ -1,0 +1,28 @@
+-- Registered Names
+--
+-- Write a query that selects employee names
+-- from the employee table:
+-- the first column is just the name,
+-- the second is the name in lowercase,
+-- and the third is the name in uppercase.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Регістр-овані імена
+--
+-- Напиши запит, який з таблиці employee
+-- вибере імена name співробітників:
+-- перша колонка — просто ім'я,
+-- друга — ім'я у нижньому регістрі,
+-- та третя — ім'я у верхньому регістрі.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, LOWER(name), UPPER(name) FROM employee;

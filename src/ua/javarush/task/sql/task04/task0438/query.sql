@@ -1,0 +1,28 @@
+-- Registered Names
+--
+-- Write a query that selects employee positions
+-- from the employee table,
+-- but at the same time,
+-- if the word "developer" occurs in a position,
+-- replace it with "software developer".
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Регістр-овані імена
+--
+-- Напиши запит, який із таблиці employee
+-- вибере позиції position співробітників,
+-- але водночас, якщо у позиції
+-- зустрічається слово "developer",
+-- заміни його на "software developer".
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT REPLACE(position, 'developer', 'software developer') FROM employee;

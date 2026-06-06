@@ -1,0 +1,25 @@
+-- Shortening Positions
+--
+-- Write a query that selects the first 8 characters
+-- of employee positions
+-- from the employee table,
+-- based on the position field.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Скорочуємо позиції
+--
+-- Напиши запит, який із таблиці employee
+-- вибере перші 8 символів позиції position
+-- співробітників.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT SUBSTRING(position, 1, 8) FROM employee;

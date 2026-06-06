@@ -1,0 +1,30 @@
+-- Top Three Shortest Cities
+--
+-- Write a query that selects 3 cities
+-- from the cities table,
+-- where the city field has the smallest number of letters
+-- in the city name.
+-- After the name, add the number of letters
+-- in the name through a hyphen.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Трійка найкоротших міст
+--
+-- Напиши запит, який з таблиці cities
+-- вибере 3 міста city,
+-- що мають найменшу кількість літер
+-- у назві міста.
+-- Після назви додай через дефіс
+-- кількість літер у назві.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT CONCAT(city, '-', CHAR_LENGTH(city)) FROM cities ORDER BY CHAR_LENGTH(city) ASC LIMIT 3;

@@ -1,0 +1,29 @@
+-- Decoding the Name
+--
+-- Write a query that selects employee names
+-- in base64 from the name_b64 field
+-- into the first column,
+-- and the names converted from base64
+-- into the second column
+-- from the employee table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Дебазуємо ім'я
+--
+-- Напиши запит, який з таблиці employee
+-- вибере імена name_b64 співробітників base64
+-- до першої колонки
+-- та імена, перетворені з base64,
+-- на другу.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name_b64, FROM_BASE64(name_b64) FROM employee;

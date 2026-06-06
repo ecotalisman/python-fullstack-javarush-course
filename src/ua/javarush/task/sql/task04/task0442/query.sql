@@ -1,0 +1,26 @@
+-- Overdue Tasks
+--
+-- Write a query that selects task titles
+-- from the task table,
+-- where the tasks ended on the date '2022-10-01',
+-- using the exp_date field.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Запізнілі задачі
+--
+-- Напиши запит, який з таблиці task
+-- вибере назви завдань title,
+-- які закінчилися, поле exp_date,
+-- на дату '2022-10-01'.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT title FROM task WHERE exp_date < '2022-10-01';

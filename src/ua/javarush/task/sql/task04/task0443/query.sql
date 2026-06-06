@@ -1,0 +1,26 @@
+-- Top Three Longest Cities
+--
+-- Write a query that selects 3 cities
+-- from the cities table,
+-- where the city field has the largest number of letters
+-- in the city name.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Трійка найдовших міст
+--
+-- Напиши запит, який із таблиці cities
+-- вибере 3 міста city,
+-- у яких найбільша кількість літер
+-- у назві міста.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT city FROM cities ORDER BY CHAR_LENGTH(city) DESC LIMIT 3;

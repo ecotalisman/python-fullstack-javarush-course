@@ -1,0 +1,26 @@
+-- Name-Position
+--
+-- Write a query that selects the names and positions
+-- of employees from the employee table,
+-- joined with a hyphen '-'.
+-- The result must be one column.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Ім'я-позиція
+--
+-- Напиши запит, який з таблиці employee
+-- вибере імена name та позиції position
+-- співробітників через дефіс '-'.
+-- Результат — одна колонка.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT CONCAT(name, '-', position) FROM employee;

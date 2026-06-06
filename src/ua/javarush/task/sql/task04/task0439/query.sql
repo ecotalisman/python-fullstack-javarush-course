@@ -1,0 +1,34 @@
+-- Trimming the Name
+--
+-- While entering names into the database,
+-- someone seems to have fallen asleep on the space key.
+-- Write a query that selects employee names
+-- from the employee table:
+-- the first column is just the name,
+-- the second is the name with spaces removed from both sides,
+-- the third is the name with spaces removed from the left side,
+-- and the fourth is the name with spaces removed from the right side.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Трим-уємо ім'я
+--
+-- Під час введення імен до БД
+-- хтось, здається, засинав на пробілі.
+-- Напиши запит, який із таблиці employee
+-- вибере імена name співробітників:
+-- перша колонка — просто ім'я,
+-- друга — ім'я з видаленням пробілів з обох сторін,
+-- третя — ім'я з видаленням пробілів з лівого боку,
+-- та четверта — ім'я з видаленням пробілів з правого боку.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, TRIM(name), LTRIM(name), RTRIM(name) FROM employee;

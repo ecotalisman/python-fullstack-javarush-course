@@ -1,0 +1,26 @@
+-- Encoding the Name
+--
+-- Write a query that selects employee names
+-- from the employee table:
+-- the first column is just the name,
+-- and the second is the name converted to base64.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Базуємо ім'я
+--
+-- Напиши запит, який з таблиці employee
+-- вибере імена name співробітників:
+-- перша колонка — просто ім'я,
+-- друга — ім'я, перетворене на base64.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, TO_BASE64(name) FROM employee;

@@ -1,0 +1,35 @@
+-- Update 2
+--
+-- Make changes to the part table:
+--
+-- for the part with number 92909,
+-- change the name to 'Technic, Steering Wheel Hub 3 Pin Round';
+--
+-- for the part with number 19916,
+-- change the name to
+-- 'Minifigure, Headgear Helmet SW Darth Vader Type 2 Top'.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Зміна 2
+--
+-- Внеси зміни до таблиці part:
+--
+-- у деталі з номером 92909
+-- зміни назву на 'Technic, Steering Wheel Hub 3 Pin Round';
+--
+-- у деталі з номером 19916
+-- зміни назву на
+-- 'Minifigure, Headgear Helmet SW Darth Vader Type 2 Top'.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+UPDATE part SET name = 'Technic, Steering Wheel Hub 3 Pin Round' WHERE number = 92909;
+UPDATE part SET name = 'Minifigure, Headgear Helmet SW Darth Vader Type 2 Top' WHERE number = 19916;

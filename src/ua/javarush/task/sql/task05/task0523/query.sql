@@ -1,0 +1,31 @@
+-- Numeric Functions 2
+--
+-- Get the number and inventory columns
+-- from the lego_set table.
+-- Increase the value of the inventory column by 1 percent,
+-- and round the result to the nearest integer.
+-- Name the column with the rounded values with_spare_parts.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Числові функції 2
+--
+-- Отримай з таблиці lego_set
+-- стовпчики number та inventory.
+-- Значення колонки inventory
+-- збільш на 1 відсоток,
+-- і те, що вийшло,
+-- округли до найближчого цілого.
+-- Колонку із округленими значеннями
+-- назви with_spare_parts.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT number, ROUND(inventory * 1.01) AS with_spare_parts FROM lego_set;

@@ -1,0 +1,27 @@
+-- Filtering 3
+--
+-- Get the name column from the part table.
+-- Filter the data:
+-- only values that contain the string 'Slope' twice
+-- or contain the string 'Clip' twice are needed.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Фільтрація 3
+--
+-- Отримай з таблиці part колонку name.
+-- Відфільтруй дані:
+-- потрібні тільки ті значення,
+-- які двічі містять рядок 'Slope'
+-- або двічі містять рядок 'Clip'.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name FROM part WHERE name LIKE '%Slope%Slope%' OR name LIKE '%Clip%Clip%';

@@ -1,0 +1,26 @@
+-- Grouping
+--
+-- Get the number of sets for each year
+-- from the lego_set table.
+-- The result must contain two columns:
+-- released and count(*).
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Групування
+--
+-- Отримай з таблиці lego_set
+-- кількість наборів кожного року.
+-- Має вийти дві колонки:
+-- released і count(*).
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT released, COUNT(*) FROM lego_set GROUP BY released;

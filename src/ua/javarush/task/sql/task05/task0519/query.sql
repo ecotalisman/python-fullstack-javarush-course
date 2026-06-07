@@ -1,0 +1,35 @@
+-- Grouping and Sorting 2
+--
+-- Get the number of sets for each year
+-- from the lego_set table.
+-- Set the name total
+-- for the column with the count.
+-- Filter the sets by the number column:
+-- take into account only sets
+-- with number less than 10000.
+-- Sort the result by the number of sets
+-- in descending order.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Групування та сортування 2
+--
+-- Отримай з таблиці lego_set
+-- кількість наборів кожного року.
+-- Колонці з кількістю встанови ім'я total.
+-- Відфільтруй набори за колонкою number:
+-- зважай тільки на набори
+-- з number менше 10000.
+-- Відсортуй результат за кількістю наборів
+-- за спаданням.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT released, COUNT(*) AS total FROM lego_set WHERE number < 10000 GROUP BY released ORDER BY total DESC;

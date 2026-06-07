@@ -1,0 +1,33 @@
+-- Grouping and Sorting 1
+--
+-- Get the number of sets for each year
+-- from the lego_set table.
+-- Set the name total
+-- for the column with the count.
+-- The result must contain two columns:
+-- released and total.
+-- Sort the result by the number of sets
+-- in descending order.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Групування та сортування 1
+--
+-- Отримай з таблиці lego_set
+-- кількість наборів кожного року.
+-- Колонці з кількістю встанови ім'я total.
+-- Повинно вийти дві колонки:
+-- released і total.
+-- Відсортуй результат за кількістю наборів
+-- за спаданням.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT released, COUNT(*) AS total FROM lego_set GROUP BY released ORDER BY total DESC;

@@ -1,0 +1,27 @@
+-- Numeric Functions 1
+--
+-- Get the name and weight columns
+-- from the part table.
+-- Round the value of the weight column up.
+-- Name the column with the rounded values ceil_weight.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Числові функції 1
+--
+-- Отримай з таблиці part
+-- колонки name та weight.
+-- Значення стовпчика weight округли вгору.
+-- Колонку з округленими значеннями
+-- назви ceil_weight.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, CEIL(weight) AS ceil_weight FROM part;

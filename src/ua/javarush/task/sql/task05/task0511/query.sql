@@ -1,0 +1,25 @@
+-- Sorting 3
+--
+-- Get the number column from the lego_set table,
+-- sorted by year, using the released column:
+-- from older sets to newer ones.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сортування 3
+--
+-- Отримай колонку number таблиці lego_set
+-- із сортуванням за роками,
+-- колонка released:
+-- від старіших до новіших.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT number FROM lego_set ORDER BY released;

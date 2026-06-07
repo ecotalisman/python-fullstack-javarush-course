@@ -1,0 +1,30 @@
+-- Restore the backup from this file.
+-- The file contains a backup of the lego schema.
+-- File name: Dump20220901.sql
+--
+-- Sorting 1
+--
+-- Get the weight column from the part table,
+-- sorted from the smallest weight to the largest.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Розгорни бекап із цього файлу.
+-- Файл містить бекап схеми lego.
+-- Файл з назвою Dump20220901.sql
+--
+-- Сортування 1
+--
+-- Отримай колонку weight таблиці part,
+-- відсортовану від меншої ваги до більшої.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT weight FROM part ORDER BY weight;

@@ -1,0 +1,22 @@
+-- Sorting 2
+--
+-- Get the inventory column from the lego_set table,
+-- sorted from the largest quantity to the smallest.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сортування 2
+--
+-- Отримай колонку inventory таблиці lego_set,
+-- відсортовану від більшої кількості до меншої.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT inventory FROM lego_set ORDER BY inventory DESC;

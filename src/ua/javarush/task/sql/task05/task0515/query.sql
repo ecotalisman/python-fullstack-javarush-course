@@ -1,0 +1,27 @@
+-- Filtering 2
+--
+-- Get the name column from the part table.
+-- Filter the data:
+-- only values that contain the string 'Slope'
+-- and do not contain the string '45°' are needed.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Фільтрація 2
+--
+-- Отримай з таблиці part колонку name.
+-- Відфільтруй дані:
+-- потрібні тільки ті значення,
+-- які містять рядок 'Slope'
+-- і не містять рядок '45°'.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name FROM part WHERE name LIKE '%Slope%' AND name NOT LIKE '%45°%';

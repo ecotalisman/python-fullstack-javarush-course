@@ -1,0 +1,30 @@
+-- Sorting 5
+--
+-- Get the name, released, and inventory columns
+-- from the lego_set table.
+-- Sort the data by year:
+-- newer sets first.
+-- Within the same year,
+-- sort by inventory in descending order.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Сортування 5
+--
+-- Отримай з таблиці lego_set
+-- колонки name, released, inventory.
+-- Відсортуй дані за роками:
+-- спочатку новіші.
+-- Усередині одного року
+-- відсортуй за inventory у порядку спадання.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+SELECT name, released, inventory FROM lego_set ORDER BY released DESC, inventory DESC;

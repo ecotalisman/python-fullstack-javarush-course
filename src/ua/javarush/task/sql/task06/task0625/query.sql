@@ -1,0 +1,26 @@
+-- Indexing Population
+--
+-- Write a query that will create
+-- an index named population_index
+-- in the cities table
+-- on the population column.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Індексуємо популяцію
+--
+-- Напиши запит, який створить
+-- індекс population_index
+-- у таблиці cities
+-- за колонкою population.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+ALTER TABLE cities ADD INDEX population_index (population);

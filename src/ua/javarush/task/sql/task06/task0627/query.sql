@@ -1,0 +1,26 @@
+-- Deleting an Index
+--
+-- Write a query that will delete
+-- the salary_index index
+-- from the employee table.
+-- Use ALTER TABLE.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Видаляємо індекс
+--
+-- Напиши запит, який видалити
+-- індекс salary_index
+-- з таблиці employee.
+-- Використовуй ALTER TABLE.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+ALTER TABLE employee DROP INDEX salary_index;

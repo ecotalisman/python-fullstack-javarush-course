@@ -1,0 +1,26 @@
+-- Indexing Position and Salary
+--
+-- Write a query that will create
+-- indexes in the employee table:
+-- position_index on the position column
+-- and salary_index on the salary column.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Індексуємо позицію та зарплату
+--
+-- Напиши запит, який створить
+-- індекси в таблиці employee:
+-- position_index за колонкою position
+-- і salary_index за колонкою salary.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+ALTER TABLE employee ADD INDEX position_index (position), ADD INDEX salary_index (salary);

@@ -1,0 +1,28 @@
+-- Adding a FOREIGN KEY to a Table
+--
+-- Write a script for adding
+-- a FOREIGN KEY to the event table
+-- on the user_id field
+-- with a reference to the id field
+-- of the users table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Додавання до таблиці FOREIGN KEY
+--
+-- Напиши скрипт додавання FOREIGN KEY
+-- до таблиці event
+-- за полем user_id
+-- із посиланням на поле id
+-- таблиці users.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+ALTER TABLE event ADD FOREIGN KEY (user_id) REFERENCES users(id);

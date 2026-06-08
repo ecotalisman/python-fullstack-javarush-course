@@ -1,0 +1,24 @@
+-- Removing a FOREIGN KEY
+--
+-- Write a script for removing
+-- the FOREIGN KEY fk_user
+-- from the event table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Видалення FOREIGN KEY
+--
+-- Напиши скрипт видалення
+-- FOREIGN KEY fk_user
+-- із таблиці event.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+ALTER TABLE event DROP FOREIGN KEY fk_user;

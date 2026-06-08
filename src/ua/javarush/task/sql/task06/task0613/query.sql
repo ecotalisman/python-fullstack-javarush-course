@@ -1,0 +1,28 @@
+-- Increasing Salaries for Managers
+--
+-- Write a query that will increase
+-- the salary (salary field) by 500
+-- for employees (employee table)
+-- whose position (position field)
+-- is manager ('manager').
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Підвищуємо зарплату менеджерам
+--
+-- Напиши запит, який підніме зарплату
+-- (поле salary) на 500
+-- працівникам (таблиця employee),
+-- у яких позиція (поле position)
+-- менеджер ('manager').
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+UPDATE employee SET salary = salary + 500 WHERE position = 'manager';

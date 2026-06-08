@@ -1,0 +1,23 @@
+-- New Euro Standard
+--
+-- Write a query that will set
+-- the euro standard (euro) to 7
+-- for all cars in the cars table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Новий євростандарт
+--
+-- Напиши запит, який всім автомобілям
+-- у таблиці cars встановить євростандарт (euro) 7.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+UPDATE cars SET cars.euro = 7;

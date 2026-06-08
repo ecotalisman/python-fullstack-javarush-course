@@ -1,0 +1,33 @@
+-- Changes for Developers
+--
+-- Write a query that will set
+-- the salary (salary field) to 5000
+-- and change the position name
+-- to fullstack developer
+-- for all employees (employee table)
+-- whose position name (position field)
+-- contains the word "developer".
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Зміни по developer-ам
+--
+-- Напиши запит, який усім співробітникам
+-- (таблиця employee),
+-- що мають в назві позиції (поле position)
+-- слово "developer",
+-- встановить зарплату (поле salary)
+-- у розмірі 5000
+-- і змінить назву позиції
+-- на fullstack developer.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+UPDATE employee SET salary = 5000, position = 'fullstack developer' WHERE position LIKE '%developer';

@@ -1,0 +1,27 @@
+-- Updating Cars
+--
+-- Write a query that will set
+-- the name (name) to 'New Car',
+-- the production year (prod_year) to 2023,
+-- and the price (price) to 1000000
+-- for all cars in the cars table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Оновлення автівок
+--
+-- Напиши запит, який всім автомобілям
+-- у таблиці cars встановить назву (name) 'New Car',
+-- рік випуску (prod_year) 2023
+-- та вартість (price) 1000000.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+UPDATE cars SET cars.name = 'New Car', cars.prod_year = 2023, cars.price = 1000000;

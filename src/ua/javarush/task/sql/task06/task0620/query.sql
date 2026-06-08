@@ -1,0 +1,26 @@
+-- Adding Salary
+--
+-- Write a query that will add
+-- a salary column named salary
+-- of type INT
+-- to the employee table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Додавання зарплати
+--
+-- Напиши запит, який додасть
+-- до таблиці employee
+-- колонку із зарплатою salary
+-- з типом INT.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+ALTER TABLE employee ADD COLUMN salary INT;

@@ -1,0 +1,26 @@
+-- Changing Salary
+--
+-- Write a query that will change
+-- the type of the salary column (salary)
+-- in the employee table
+-- to FLOAT.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Зміна в зарплаті
+--
+-- Напиши запит, який змінить
+-- у таблиці employee
+-- тип колонки із зарплатою (salary)
+-- на FLOAT.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+ALTER TABLE employee MODIFY COLUMN salary FLOAT;

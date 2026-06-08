@@ -1,0 +1,24 @@
+-- Deleting Position
+--
+-- Write a query that will delete
+-- the position column (position)
+-- from the employee table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Видаляємо позицію
+--
+-- Напиши запит, який видалить
+-- у таблиці employee
+-- колонку з позицією (position).
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+ALTER TABLE employee DROP COLUMN position;

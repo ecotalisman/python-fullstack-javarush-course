@@ -1,0 +1,24 @@
+-- Deleting Population
+--
+-- Write a query that will delete
+-- the population column (population)
+-- from the cities table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Видаляємо популяцію
+--
+-- Напиши запит, який видалить
+-- у таблиці cities
+-- колонку із населенням (population).
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+ALTER TABLE cities DROP COLUMN population;

@@ -1,0 +1,22 @@
+-- Adding Suppliers to Customers
+--
+-- Add all columns of the suppliers table
+-- to the customers table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Додаємо постачальників до покупців
+--
+-- Додай до таблиці customers
+-- всі колонки таблиці suppliers.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+INSERT INTO customers SELECT * FROM suppliers;

@@ -1,0 +1,22 @@
+-- Deleting by ID
+--
+-- Delete from the task table
+-- the record with id equal to 5.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Видалення за id
+--
+-- Видали з таблиці task
+-- запис з id, що дорівнює 5.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+DELETE FROM task WHERE id = 5;

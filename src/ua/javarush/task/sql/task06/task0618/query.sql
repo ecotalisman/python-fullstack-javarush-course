@@ -1,0 +1,22 @@
+-- Deleting All Data 2
+--
+-- Delete all records from the task table
+-- using truncate.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Видалення всіх даних 2
+--
+-- Видали з таблиці task
+-- всі записи за допомогою truncate.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+TRUNCATE TABLE task;

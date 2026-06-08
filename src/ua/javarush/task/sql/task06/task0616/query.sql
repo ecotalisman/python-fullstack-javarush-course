@@ -1,0 +1,24 @@
+-- Deleting by ID Range
+--
+-- Delete from the task table
+-- the records with IDs in the range
+-- from 5 to 10.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Видалення за діапазоном id
+--
+-- Видали з таблиці task
+-- записи з ID в діапазоні
+-- від 5 до 10.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+DELETE FROM task WHERE ID BETWEEN 5 AND 10;

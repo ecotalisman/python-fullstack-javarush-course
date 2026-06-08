@@ -1,0 +1,22 @@
+-- Deleting All Data
+--
+-- Delete all records from the task table
+-- using delete.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Видалення всіх даних
+--
+-- Видали з таблиці task
+-- всі записи за допомогою delete.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+DELETE FROM task;

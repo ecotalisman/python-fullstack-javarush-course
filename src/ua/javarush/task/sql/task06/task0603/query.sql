@@ -1,0 +1,26 @@
+-- Creating a Virtual Table
+--
+-- In this task, you need to:
+-- using the VIEW operator,
+-- create a virtual table named all_users,
+-- which will be based on all columns of the test table.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Створюємо віртуальну таблицю
+--
+-- У цьому завданні тобі знадобиться:
+-- використовуючи оператор VIEW,
+-- створити віртуальну таблицю з назвою all_users,
+-- яка буде ґрунтуватися на всіх колонках таблиці test.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+CREATE VIEW all_users AS SELECT * FROM test;

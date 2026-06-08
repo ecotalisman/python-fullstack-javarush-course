@@ -1,0 +1,24 @@
+-- Database Access
+--
+-- In this task, you need to:
+-- using the USE operator,
+-- access the database named test_db.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Звернення до бази даних
+--
+-- У цьому завданні тобі знадобиться:
+-- використовуючи оператор USE,
+-- звернутися до бази даних під назвою test_db.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+USE test_db;

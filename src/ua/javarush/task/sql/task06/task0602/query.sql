@@ -1,0 +1,24 @@
+-- Database Access 2
+--
+-- In this task, you need to:
+-- using the USE operator,
+-- access the database named shop.
+--
+-- Requirements:
+--
+-- 1. The query must be implemented according to the task condition.
+--
+-- 🇺🇦 Ukrainian version:
+--
+-- Звернення до бази даних 2
+--
+-- У цьому завданні тобі знадобиться:
+-- використовуючи оператор USE,
+-- звернутися до бази даних під назвою shop.
+--
+-- Вимоги:
+--
+-- 1. Запит має бути реалізований згідно з умовою.
+
+-- Write your code here:
+USE shop;

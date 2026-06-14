@@ -6,6 +6,7 @@ venv/
 # Ignore Python compiled files
 *.pyc
 __pycache__/
+db.sqlite3
 
 # habr-elk runtime files
 src/ua/javarush/python/fullstack/level07/task26/habr-elk/logs/

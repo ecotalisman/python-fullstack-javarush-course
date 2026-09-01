@@ -1,12 +1,29 @@
 # Ignore PyCharm files
 .idea/
 *.iml
+
+# Ignore virtual environments
 venv/
+.venv/
+
+# Ignore Claude Code local settings
+.claude/
 
 # Ignore Python compiled files
 *.pyc
 __pycache__/
-db.sqlite3
+.pytest_cache/
+
+# Ignore database and secrets
+*.sqlite3
+.env
+
+# Ignore logs
+*.log
+
+# Django generated files
+/staticfiles/
+/media/
 
 # habr-elk runtime files
 src/ua/javarush/python/fullstack/level07/task26/habr-elk/logs/
